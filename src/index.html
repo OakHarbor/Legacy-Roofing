@@ -1,0 +1,691 @@
+---
+title: "Affordable & Reliable Roofers | Sunny's Roofing | Edmonds, WA"
+description: "Reliable roofing in Edmonds, WA. We provide expert roof repair, replacement, inspections, and maintenance for homes and businesses. Free estimates!"
+permalink: "/"
+tags: "sitemap" # content/content.json will make sure that all pages in content/ are marked with a "sitemap" tag, for automatic sitemap generation. As index.html is not in content/, we need to add it here to ensure the root page is included in the sitemap generation
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <!-- Critical styles are loaded first -->
+    <link rel="preload" as="image" href="{% getUrl "/assets/images/hero.jpeg" | resize({ width: 640, height: 1000 }) | avif %}" />
+    <link rel="stylesheet" href="/assets/css/critical.css"/>
+
+    <!-- If we're in production, defer the rest of the home page styles. In development, always load it. Otherwise the site will break when hot-reload is used. -->
+    {% if client.isProduction %}
+        <link rel="preload" href="/assets/css/local.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript>
+            <link rel="stylesheet" href="/assets/css/local.css">
+        </noscript>
+
+    {% else %}
+        <link rel="stylesheet" href="/assets/css/local.css"/>
+    {% endif %}
+
+    <!-- To ensure proper validation, prevent errors, and encourage developers to check, schema's are an opt-in feature. They're very bespoke and requires some customising  -->
+    <!-- Uncomment the code below to enable Structured Data, and test it when you deploy to Netlify - https://developers.google.com/search/docs/appearance/structured-data -->
+    {% include "components/home-schema.html" %}
+{% endblock %}
+
+{% block body %}
+
+<!-- ============================================ -->
+<!--                    Hero                      -->
+<!-- ============================================ -->
+
+<section id="hero-1427">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">YOUR TRUSTED EDMONDS ROOFING EXPERTS</span>
+            <h1 class="cs-title">Protecting Homes With Lasting Roofing Solutions</h1>
+            <p class="cs-text">
+              From emergency repairs to complete replacements, Sunny's Roofing delivers honest craftsmanship, transparent pricing, and dependable service for homes and businesses across Edmonds and Greater Washington.
+            </p>
+            <div class="cs-button-group">
+                <a href="/contact/" class="cs-button-solid">Get Your Free Quote</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Background Image -->
+    <picture class="cs-background">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/hero.jpeg" | resize({ width: 640, height: 1000 }) | avif %}" type="image/avif">
+        <!--Tablet Image-->
+        <source media="(max-width: 601px) and (max-width: 1024px)" srcset="{% getUrl "/assets/images/hero.jpeg" | resize({ width: 2048, height: 2058 }) | avif %}" type="image/avif">
+        <!--Desktop Image-->
+        <source media="(max-width: 1025px)" srcset="{% getUrl "/assets/images/hero.jpeg" | resize({ width: 2500, height: 1431 }) | avif %}" type="image/avif">
+        <img src="{% getUrl "/assets/images/hero.jpeg" | resize({ width: 2500, height: 1431 }) | jpeg %}" alt="Roofing contractor installing new roof on home" width="1920" height="1099" loading="eager" fetchpriority="high" decoding="async">
+    </picture>
+</section>
+                         
+<!-- ============================================ -->
+<!--                    Services                  -->
+<!-- ============================================ -->
+
+<section id="services-2175">
+    <div class="cs-container">
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <a href="/roof-replacements/" class="cs-item-link">
+                    <h2 class="cs-h3">
+                        <img class="cs-icon" src="/assets/svgs/s1.svg" loading="lazy" decoding="async" alt="icon" width="32" height="32" aria-hidden="true">
+                        Roof Replacements
+                    </h2>
+                    <p class="cs-item-text">
+                        Complete tear-off and installation protecting Edmonds homes from Pacific Northwest weather for decades.
+                    </p>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="/roof-repair/" class="cs-item-link">
+                    <h2 class="cs-h3">
+                        <img class="cs-icon" src="/assets/svgs/s2.svg" loading="lazy" decoding="async" alt="icon" width="32" height="32" aria-hidden="true">
+                        Roof Repair Services
+                    </h2>
+                    <p class="cs-item-text">
+                       Fast, reliable leak fixes and shingle repairs preventing water damage to your home's interior.
+                    </p>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="/metal-roof-installation/" class="cs-item-link">
+                    <h2 class="cs-h3">
+                        <img class="cs-icon" src="/assets/svgs/s3.svg" loading="lazy" decoding="async" alt="icon" width="32" height="32" aria-hidden="true">
+                        Metal Roof installation
+                    </h2>
+                    <p class="cs-item-text">
+                        Choose from our range of Photo booth options, including open-air to suit your wedding theme and style.
+                    </p>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="/new-roof-installation/" class="cs-item-link">
+                    <h2 class="cs-h3">
+                        <img class="cs-icon" src="/assets/svgs/s4.svg" loading="lazy" decoding="async" alt="icon" width="32" height="32" aria-hidden="true">
+                        New Roof Installations
+                    </h2>
+                    <p class="cs-item-text">
+                        Professional installation using premium materials, backed by warranties and built for Washington's climate.
+                    </p>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="/storm-damage-repair/" class="cs-item-link">
+                    <h2 class="cs-h3">
+                        <img class="cs-icon" src="/assets/svgs/s5.svg" loading="lazy" decoding="async" alt="icon" width="32" height="32" aria-hidden="true">
+                        Storm Damage Repair
+                    </h2>
+                    <p class="cs-item-text">
+                        24/7 emergency response fixing wind damage, fallen trees, and leaks with insurance assistance.
+                    </p>
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--                Side By Side                  -->
+<!-- ============================================ -->
+
+<section id="sbs-1982">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">TRUSTED ROOFING PROFESSIONALS</span>
+            <h2 class="cs-title">Honest Work, Fair Prices, Lasting Protection</h2>
+            <p class="cs-text-large">
+                Sunny's Roofing brings hands-on expertise, transparent communication, and honest workmanship to every roofing project we work on.
+            </p>
+            <p class="cs-text">
+                As a locally owned and operated business, Sunny's Roofing LLC combines years of Pacific Northwest roofing experience with modern techniques to deliver the highest quality results. We take pride in every shingle and promise transparent communication, fair pricing, and superior craftsmanship from start to finish. Every project reflects our commitment to protecting your home and earning your trust.
+            </p>
+            <a href="/about/" class="cs-button-solid">Learn More About Us</a>
+            <div class="cs-ratings">
+                <div class="cs-stars">
+                    <img class="cs-star" loading="lazy" decoding="async" src="/assets/svgs/stars.svg" alt="stars" width="120" height="20" aria-hidden="true">
+                </div>
+                <div class="cs-rating">
+                    <h3 class="cs-h3">100% Client Satisfaction</h3>
+                    <p class="cs-rating-text">
+                        Our clients trust us for honest pricing, on-time completion, and roofs built to withstand Washington weather.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="cs-image-group">
+            <picture class="cs-background">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/c1.jpeg" | resize({ width: 576, height: 960 }) | avif %}" type="image/avif">
+                <!--Tablet Image-->
+                <source media="(max-width: 601px) and (max-width: 1024px)" srcset="{% getUrl "/assets/images/c1.jpeg" | resize({ width: 930, height: 1530 }) | avif %}" type="image/avif">
+                <!--Desktop Image-->
+                <source media="(max-width: 1025px)" srcset="{% getUrl "/assets/images/c1.jpeg" | resize({ width: 1260, height: 1680 }) | avif %}" type="image/avif">
+                <img src="{% getUrl "/assets/images/c1.jpeg" | resize({ width: 1260, height: 1680 }) | jpeg %}" alt="custom house build" width="630" height="840" loading="lazy" decoding="async">
+            </picture>
+            <div class="cs-box">
+                <img class="cs-box-icon" loading="lazy" decoding="async" src="/assets/images/owner.svg" alt="concrete truck" width="60" height="60">
+                <span class="cs-desc">
+                    Owner operated
+                </span>
+                <p class="cs-box-text">
+                    Full control over quality, timeline, and customer service excellence.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--                Why Choose Us                 -->
+<!-- ============================================ -->
+
+<section id="why-choose-1630">
+    <div class="cs-container">
+        <div class="cs-flex">
+            <picture class="cs-picture">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/c2.jpeg" | resize({ width: 576, height: 320 }) | avif %}" type="image/avif">
+                <!--Tablet Image-->
+                <source media="(max-width: 601px) and (max-width: 1024px)" srcset="{% getUrl "/assets/images/c2.jpeg" | resize({ width: 864, height: 802 }) | avif %}" type="image/avif">
+                <!--Desktop Image-->
+                <source media="(max-width: 1025px)" srcset="{% getUrl "/assets/images/c2.jpeg" | resize({ width: 1216, height: 858 }) | avif %}" type="image/avif">
+                <img src="{% getUrl "/assets/images/c2.jpeg" | resize({ width: 1216, height: 858 }) | jpeg %}" alt="roofing" width="608" height="429" loading="lazy" decoding="async">
+            </picture>
+
+            <div class="cs-content">
+                <span class="cs-topper">Why Choose Us</span>
+                <h2 class="cs-title">Experience, Quality, and Commitment You Can Trust</h2>
+                <p class="cs-text">
+                   We're not just roofing contractors — we're dedicated professionals who take pride in our craft. From consultation to completion, our team ensures your project is handled with precision, efficiency, and care that lasts.
+                </p>
+                <a href="/contact/" class="cs-button-solid">Get Your Free Quote</a> 
+            </div>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <h3 class="cs-h3">
+                    <picture class="cs-wrapper">
+                        <img class="cs-h3-icon" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/clock.svg" alt="icon" width="24" height="24">
+                    </picture> 
+                    24/7 Storm Response
+                </h3>
+                <p class="cs-item-text">
+                    Emergency repairs when you need them most, with same-day service for urgent leaks and storm damage throughout Edmonds.
+                </p>
+            </li>
+            <li class="cs-item">
+                <h3 class="cs-h3">
+                    <picture class="cs-wrapper">
+                        <img class="cs-h3-icon" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/group.svg" alt="icon" width="24" height="24">
+                    </picture>
+                    Washington Experts
+                </h3>
+                <p class="cs-item-text">
+                    Licensed, bonded, and insured professionals with extensive experience in Pacific Northwest roofing challenges and solutions.
+                </p>
+            </li>
+            <li class="cs-item">
+                <h3 class="cs-h3">
+                    <picture class="cs-wrapper">
+                        <img class="cs-h3-icon" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/truck.svg" alt="icon" width="24" height="24">
+                    </picture>
+                    Premium Materials 
+                </h3>
+                <p class="cs-item-text">
+                    GAF and CertainTeed certified installations using top-tier materials designed for our unique climate and weather patterns.
+                </p>
+            </li>
+             <li class="cs-item">
+                <h3 class="cs-h3">
+                    <picture class="cs-wrapper">
+                        <img class="cs-h3-icon" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/thumbs-up.svg" alt="icon" width="24" height="24">
+                    </picture>
+                    Transparent Pricing
+                </h3>
+                <p class="cs-item-text">
+                   Detailed estimates with no hidden fees, plus flexible financing options to make your roof replacement affordable.
+                </p>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--                  Services                    -->
+<!-- ============================================ -->
+
+<section id="services-964">
+    <div class="cs-container">
+        <!-- Left Content Section-->
+        <div class="cs-content">
+            <span class="cs-topper">Our Specialty Services</span>
+            <h2 class="cs-title">Mastering Every Roofing System and Style</h2>
+            <p class="cs-text">
+                Beyond basic repairs, we specialize in diverse roofing systems and advanced installation techniques designed to protect and enhance your property for years of dependable performance.
+            </p>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <picture class="cs-icon-wrapper">
+                    <img class="cs-icon" loading="lazy" decoding="async" src="/assets/svgs/painbrush.svg" alt="paint brush" width="40" height="40">
+                </picture>
+                <h3 class="cs-h3">Asphalt Shingle Systems</h3>
+                <p class="cs-item-text">
+                    Industry-leading installations using GAF and CertainTeed materials, engineered for Pacific Northwest weather resistance and lasting beauty.
+                </p>
+                <a href="/contact/" class="cs-link">Get A Quote</a>
+                <!--Background Image-->
+                <picture class="cs-background">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/c3.jpeg" | resize({ width: 576, height: 576 }) | avif %}" type="image/avif">
+                    <!--Tablet Image-->
+                    <source media="(max-width: 601px) and (max-width: 1024px)" srcset="{% getUrl "/assets/images/c3.jpeg" | resize({ width: 962, height: 638 }) | avif %}" type="image/avif">
+                    <!--Desktop Image-->
+                    <source media="(max-width: 1025px)" srcset="{% getUrl "/assets/images/c3.jpeg" | resize({ width: 1250, height: 650 }) | avif %}" type="image/avif">
+                    <img src="{% getUrl "/assets/images/c3.jpeg" | resize({ width: 1250, height: 650 }) | jpeg %}" alt="New shingle roof installation on residential home" width="625" height="325" loading="lazy" decoding="async">
+                </picture>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-icon-wrapper">
+                    <img class="cs-icon" loading="lazy" decoding="async" src="/assets/svgs/hose.svg" alt="icon" width="40" height="40">
+                </picture>
+                <h3 class="cs-h3">Flat & Low-Slope Roofs</h3>
+                <p class="cs-item-text">
+                    TPO, EPDM, and modified bitumen systems expertly installed with proper drainage solutions for commercial and modern residential properties.
+                </p>
+                <a href="/contact/" class="cs-link">Get A Quote</a>
+                <!--Background Image-->
+                <picture class="cs-background">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/c4.jpeg" | resize({ width: 576, height: 576 }) | avif %}" type="image/avif">
+                    <!--Tablet Image-->
+                    <source media="(max-width: 601px) and (max-width: 1024px)" srcset="{% getUrl "/assets/images/c4.jpeg" | resize({ width: 962, height: 638 }) | avif %}" type="image/avif">
+                    <!--Desktop Image-->
+                    <source media="(max-width: 1025px)" srcset="{% getUrl "/assets/images/c4.jpeg" | resize({ width: 1250, height: 650 }) | avif %}" type="image/avif">
+                    <img src="{% getUrl "/assets/images/c4.jpeg" | resize({ width: 1250, height: 650 }) | jpeg %}" alt="Roofing work in progress on multi-story home" width="625" height="325" loading="lazy" decoding="async">
+                </picture>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-icon-wrapper">
+                    <img class="cs-icon" loading="lazy" decoding="async" src="/assets/svgs/gutter.svg" alt="icon" width="40" height="40">
+                </picture>
+                <h3 class="cs-h3">Cedar Shake & Tile</h3>
+                <p class="cs-item-text">
+                    Preserve your home's character with authentic wood shake restoration or upgrade to composite alternatives that maintain classic aesthetics.
+                </p>
+                <a href="/contact/" class="cs-link">Get A Quote</a>
+                <!--Background Image-->
+                <picture class="cs-background">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/c5.jpeg" | resize({ width: 576, height: 534 }) | avif %}" type="image/avif">
+                    <!--Tablet Image-->
+                    <source media="(max-width: 601px) and (max-width: 1024px)" srcset="{% getUrl "/assets/images/c5.jpeg" | resize({ width: 962, height: 698 }) | avif %}" type="image/avif">
+                    <!--Desktop Image-->
+                    <source media="(max-width: 1025px)" srcset="{% getUrl "/assets/images/c5.jpeg" | resize({ width: 1250, height: 650 }) | avif %}" type="image/avif">
+                    <img src="{% getUrl "/assets/images/c5.jpeg" | resize({ width: 1250, height: 650 }) | jpeg %}" alt="Asphalt shingle roof being installed" width="625" height="325" loading="lazy" decoding="async">
+                </picture>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-icon-wrapper">
+                    <img class="cs-icon" loading="lazy" decoding="async" src="/assets/svgs/broom.svg" alt="icon" width="40" height="40">
+                </picture>
+                <h3 class="cs-h3">Apartments, Multi & Single Family Homes</h3>
+                <p class="cs-item-text">
+                     Sunny's Roofing brings specialized knowledge to every roofing material and configuration throughout Edmonds and Greater Washington.
+                </p>
+                <a href="/contact/" class="cs-link">Get A Quote</a>
+                <!--Background Image-->
+                <picture class="cs-background">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/c6.jpeg" | resize({ width: 576, height: 582 }) | avif %}" type="image/avif">
+                    <!--Tablet Image-->
+                    <source media="(max-width: 601px) and (max-width: 1024px)" srcset="{% getUrl "/assets/images/c6.jpeg" | resize({ width: 962, height: 698 }) | avif %}" type="image/avif">
+                    <!--Desktop Image-->
+                    <source media="(max-width: 1025px)" srcset="{% getUrl "/assets/images/c6.jpeg" | resize({ width: 1250, height: 650 }) | avif %}" type="image/avif">
+                    <img src="{% getUrl "/assets/images/c6.jpeg" | resize({ width: 1250, height: 650 }) | jpeg %}" alt="Closeup of finished asphalt shingle roofing" width="625" height="325" loading="lazy" decoding="async">
+                </picture>
+            </li>
+        </ul>
+        <a href="/contact/" class="cs-button-solid">
+            Explore All Services
+            <img loading="lazy" decoding="async" src="/assets/svgs/external-link.svg" alt="icon" width="10" height="10">
+        </a>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--                Why Choose Us                 -->
+<!-- ============================================ -->
+
+<section id="why-choose-1313">
+    <div class="cs-container">
+        <div class="cs-content">
+            <div class="cs-flex-group">
+                <span class="cs-topper">Our Purpose & Skill</span>
+                <h2 class="cs-title">Protecting Homes with Integrity Since Day One</h2>
+            </div>
+            <p class="cs-text">
+                Every roof we install reflects our commitment to honest work, fair pricing, and uncompromising quality—values that have earned the trust of homeowners throughout Washington State.
+            </p>
+        </div>
+        <div class="cs-flex">
+            <ul class="cs-ul">
+                <li class="cs-li">
+                    <h3 class="cs-h3">Our Mission</h3>
+                    <p class="cs-li-text">
+                        To deliver trustworthy, high-quality roofing services with integrity, transparency, and exceptional customer care.
+                    </p>
+                </li>
+                <li class="cs-li">
+                    <h3 class="cs-h3">Our Expertise</h3>
+                    <p class="cs-li-text">
+                        With years navigating Washington's unique climate challenges, we've developed proven methods that ensure your roof performs beautifully through heavy rain, wind, and seasonal changes.
+                    </p>
+                </li>
+            </ul>
+            <div class="cs-image-group">
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/c12.jpeg" | resize({ width: 576, height: 640 }) | avif %}" type="image/avif">
+                    <!--Tablet Image-->
+                    <source media="(max-width: 601px) and (max-width: 1024px)" srcset="{% getUrl "/assets/images/c12.jpeg" | resize({ width: 616, height: 800 }) | avif %}" type="image/avif">
+                    <!--Desktop Image-->
+                    <source media="(max-width: 1025px)" srcset="{% getUrl "/assets/images/c12.jpeg" | resize({ width: 826, height: 800 }) | avif %}" type="image/avif">
+                    <img src="{% getUrl "/assets/images/c12.jpeg" | resize({ width: 826, height: 800 }) | jpeg %}" alt="Asphalt shingle roof being installed" width="413" height="400" loading="lazy" decoding="async">
+                </picture>
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/c6.jpeg" | resize({ width: 576, height: 640 }) | avif %}" type="image/avif">
+                    <!--Tablet Image-->
+                    <source media="(max-width: 601px) and (max-width: 1024px)" srcset="{% getUrl "/assets/images/c6.jpeg" | resize({ width: 616, height: 800 }) | avif %}" type="image/avif">
+                    <!--Desktop Image-->
+                    <source media="(max-width: 1025px)" srcset="{% getUrl "/assets/images/c6.jpeg" | resize({ width: 826, height: 800 }) | avif %}" type="image/avif">
+                    <img src="{% getUrl "/assets/images/c6.jpeg" | resize({ width: 826, height: 800 }) | jpeg %}" alt="Closeup of finished asphalt shingle roofing" width="413" height="400" loading="lazy" decoding="async">
+                </picture>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--               Side By Side Pair              -->
+<!-- ============================================ -->
+
+<section id="sbs-2375">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Featured Roofing Services</span>
+            <h2 class="cs-title">Precision Craftsmanship for Every Roofing Project</h2>
+            <p class="cs-text">
+                Discover our comprehensive roofing services built on years of Pacific Northwest experience, proven expertise, and unwavering dedication. From single-family homes to multi-unit complexes, we deliver quality that protects your investment and exceeds expectations.
+            </p>
+        </div>
+        <div class="cs-wrapper">
+            <!--Side By Side-->
+            <div class="cs-flex">
+                <div class="cs-content2">
+                    <h3 class="cs-h3">New Roofs For Apartments & Multi-Family Units</h3>
+                    <p class="cs-text">
+                        Give your multi-family property long-lasting protection and a clean, modern look with our professional roofing solutions. We install high-performance roofing designed to handle heavy weather, reduce maintenance, and improve your building’s overall appeal.
+                    </p>
+                    <h4 class="cs-h4">Why Choose Our Multi-Family Roofing:</h4>
+                    <ul class="cs-ul">
+                        <li class="cs-li">
+                            <span class="cs-text-wrap">
+                                <strong>Long-Term Durability:</strong> Materials engineered to withstand demanding conditions and extend roof life.
+                            </span>
+                        </li>
+                        <li class="cs-li">
+                            <span class="cs-text-wrap">
+                                <strong>Custom Roofing Systems:</strong> Tailored to your building’s structure, layout, and budget.
+                            </span>
+                        </li>
+                        <li class="cs-li">
+                            <span class="cs-text-wrap">
+                                <strong>Reliable Craftsmanship:</strong> Installed by certified professionals with a commitment to precision on every project.
+                            </span>
+                        </li>
+                    </ul>
+                    <a href="/contact/" class="cs-button-solid">Get A Free Roof Quote</a>
+                </div>
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/g6.jpeg" | resize({ width: 512, height: 480 }) | avif %}" type="image/avif">
+                    <!--Tablet Image-->
+                    <source media="(max-width: 601px) and (max-width: 1024px)" srcset="{% getUrl "/assets/images/g6.jpeg" | resize({ width: 664, height: 1060 }) | avif %}" type="image/avif">
+                    <!--Desktop Image-->
+                    <source media="(max-width: 1025px)" srcset="{% getUrl "/assets/images/g6.jpeg" | resize({ width: 1056, height: 1060 }) | avif %}" type="image/avif">
+                    <img src="{% getUrl "/assets/images/g6.jpeg" | resize({ width: 1056, height: 1060 }) | jpeg %}" alt="Commercial roofing project on large building" width="528" height="530" loading="lazy" decoding="async">
+                </picture>
+            </div>
+            <!--SBS Reverse-->
+            <div class="cs-flex">
+                <div class="cs-content2">
+                    <h3 class="cs-h3">Residential Single Family Home Roof <a href="/roof-repair/">Repair</a> & <a href="/roof-replacements/">Replacement</a></h3>
+                    <p class="cs-text">
+                       Protect your home with expert roof repair and replacement designed to keep your family safe, comfortable, and worry-free. Our roofing specialists help restore your home’s integrity with trusted materials and meticulous installation.
+                    </p>
+                    <h4 class="cs-h4">What Homeowners Love About Our Roofing Services:</h4>
+                    <ul class="cs-ul">
+                        <li class="cs-li">
+                            <span class="cs-text-wrap">
+                                <strong>Attractive Roof Designs:</strong> Architectural options that enhance curb appeal and complement your home’s style.
+                            </span>
+                        </li>
+                        <li class="cs-li">
+                            <span class="cs-text-wrap">
+                                <strong>Weather-Resistant Protection:</strong> Built to defend against wind, rain, and harsh seasonal conditions.
+                            </span>
+                        </li>
+                        <li class="cs-li">
+                            <span class="cs-text-wrap">
+                                <strong>Low-Maintenance Performance:</strong> Quality materials that minimize future repairs and upkeep.
+                            </span>
+                        </li>
+                    </ul>
+                    <a href="/contact/" class="cs-button-solid">Get A Roof Quote</a>
+                </div>
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/c8.jpeg" | resize({ width: 512, height: 480 }) | avif %}" type="image/avif">
+                    <!--Tablet Image-->
+                    <source media="(max-width: 601px) and (max-width: 1024px)" srcset="{% getUrl "/assets/images/c8.jpeg" | resize({ width: 664, height: 1152 }) | avif %}" type="image/avif">
+                    <!--Desktop Image-->
+                    <source media="(max-width: 1025px)" srcset="{% getUrl "/assets/images/c8.jpeg" | resize({ width: 1056, height: 1012 }) | avif %}" type="image/avif">
+                    <img src="{% getUrl "/assets/images/c8.jpeg" | resize({ width: 1056, height: 1012 }) | jpeg %}" alt="Closeup of commercial flat roofing surface" width="528" height="506" loading="lazy" decoding="async">
+                </picture>
+            </div>
+            <!--Side By Side-->
+            <div class="cs-flex">
+                <div class="cs-content2">
+                    <h3 class="cs-h3">New Roofs For Town-homes & Rental Properties</h3>
+                    <p class="cs-text">
+                        Make your townhomes or rental units stand out with durable roofing built for longevity, safety, and great aesthetics. We provide streamlined, cost-effective roofing solutions ideal for property managers and real-estate investors.
+                    </p>
+                    <h4 class="cs-h4">Why Landlords & HOAs Trust Our Roofing:</h4>
+                    <ul class="cs-ul">
+                        <li class="cs-li">
+                            <span class="cs-text-wrap">
+                                <strong>Timeless Curb Appeal:</strong> Clean, modern roofing styles that elevate property value.
+                            </span>
+                        </li>
+                        <li class="cs-li">
+                            <span class="cs-text-wrap">
+                                <strong>Dependable Construction:</strong> Strong, protective materials engineered for long-term performance.
+                            </span>
+                        </li>
+                        <li class="cs-li">
+                            <span class="cs-text-wrap">
+                                <strong>Consistent, Quality Finish:</strong> Every roof installed with accuracy and professional craftsmanship.
+                            </span>
+                        </li>
+                    </ul>
+                    <a href="/contact/" class="cs-button-solid">Get Your Free Quote</a>
+                </div>
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/gallery-5.jpeg" | resize({ width: 512, height: 480 }) | avif %}" type="image/avif">
+                    <!--Tablet Image-->
+                    <source media="(max-width: 601px) and (max-width: 1024px)" srcset="{% getUrl "/assets/images/gallery-5.jpeg" | resize({ width: 664, height: 1060 }) | avif %}" type="image/avif">
+                    <!--Desktop Image-->
+                    <source media="(max-width: 1025px)" srcset="{% getUrl "/assets/images/gallery-5.jpeg" | resize({ width: 1056, height: 1012 }) | avif %}" type="image/avif">
+                    <img src="{% getUrl "/assets/images/gallery-5.jpeg" | resize({ width: 1056, height: 1012 }) | jpeg %}" alt="Completed roofing upgrade on multi-unit property" width="528" height="506" loading="lazy" decoding="async">
+                </picture>
+            </div>
+        </div>
+    </div>
+</section>
+                                
+<!-- ============================================ -->
+<!--                  Subscribe                   -->
+<!-- ============================================ -->
+
+<section id="subscribe-1718">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Get Started</span>
+            <h2 class="cs-title">Get Your Free Roofing Quote Today!</h2>
+            <p class="cs-text">
+                Protect your home or property with expert roofing you can trust. Request your free, no-obligation quote and discover how easy it is to upgrade, repair, or replace your roof with our team of professionals. Fast responses, honest pricing, and dependable service—every time.
+            </p>
+            <a class="cs-button-solid" href="/contact/">Get Your Free Quote</a>
+        </div>
+    </div>
+    <!--Background Image-->
+    <picture class="cs-background">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/c10.jpeg" | resize({ width: 640, height: 640 }) | avif %}" type="image/avif">
+        <!--Tablet Image-->
+        <source media="(max-width: 601px) and (max-width: 1024px)" srcset="{% getUrl "/assets/images/c10.jpeg" | resize({ width: 1024, height: 1006 }) | avif %}" type="image/avif">
+        <!--Desktop Image-->
+        <source media="(max-width: 1025px)" srcset="{% getUrl "/assets/images/c10.jpeg" | resize({ width: 1920, height: 1242 }) | avif %}" type="image/avif">
+        <img src="{% getUrl "/assets/images/c10.jpeg" | resize({ width: 1920, height: 1242 }) | jpeg %}" alt="Home exterior showing newly installed roof" width="960" height="621" loading="lazy" decoding="async">
+    </picture>
+</section>
+
+<!-- ============================================ -->
+<!--                   Gallery                    -->
+<!-- ============================================ -->
+
+<section id="gallery-404">
+    <div class="cs-container">
+        <div class="cs-content">
+            <div class="cs-flex">
+                <span class="cs-topper">Our Recent Work</span>
+                <h2 class="cs-title">See Our Work Around Town</h2>
+            </div>
+        </div>
+        <div class="cs-gallery-wrapper">
+            <div class="cs-gallery">
+                <picture class="cs-image">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/g1.jpeg" | resize({ width: 270, height: 270 }) | avif %}" type="image/avif">
+                    <!--Tablet Image-->
+                    <source media="(max-width: 601px) and (max-width: 1024px)" srcset="{% getUrl "/assets/images/g1.jpeg" | resize({ width: 630, height: 630 }) | avif %}" type="image/avif">
+                    <!--Desktop Image-->
+                    <source media="(max-width: 1025px)" srcset="{% getUrl "/assets/images/g1.jpeg" | resize({ width: 1260, height: 800 }) | avif %}" type="image/avif">
+                    <img src="{% getUrl "/assets/images/g1.jpeg" | resize({ width: 1260, height: 800 }) | jpeg %}" alt="Roofing crane lifting materials for residential roof" width="630" height="400" loading="lazy" decoding="async">
+                </picture>
+
+                <picture class="cs-image">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/g2.jpg" | resize({ width: 270, height: 270 }) | avif %}" type="image/avif">
+                    <!--Tablet Image-->
+                    <source media="(max-width: 601px) and (max-width: 1024px)" srcset="{% getUrl "/assets/images/g2.jpg" | resize({ width: 630, height: 630 }) | avif %}" type="image/avif">
+                    <!--Desktop Image-->
+                    <source media="(max-width: 1025px)" srcset="{% getUrl "/assets/images/g2.jpg" | resize({ width: 610, height: 800 }) | avif %}" type="image/avif">
+                    <img src="{% getUrl "/assets/images/g2.jpg" | resize({ width: 610, height: 800 }) | jpeg %}" alt="Rolled roofing membrane installation on home" width="305" height="400" loading="lazy" decoding="async">
+                </picture>
+
+                <picture class="cs-image">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/g3.jpg" | resize({ width: 270, height: 270 }) | avif %}" type="image/avif">
+                    <!--Tablet Image-->
+                    <source media="(max-width: 601px) and (max-width: 1024px)" srcset="{% getUrl "/assets/images/g3.jpg" | resize({ width: 630, height: 630 }) | avif %}" type="image/avif">
+                    <!--Desktop Image-->
+                    <source media="(max-width: 1025px)" srcset="{% getUrl "/assets/images/g3.jpg" | resize({ width: 610, height: 800 }) | avif %}" type="image/avif">
+                    <img src="{% getUrl "/assets/images/g3.jpg" | resize({ width: 610, height: 800 }) | jpeg %}" alt="Delivery truck unloading roofing materials" width="305" height="400" loading="lazy" decoding="async">
+                </picture>
+
+                <picture class="cs-image">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/g4.jpg" | resize({ width: 270, height: 270 }) | avif %}" type="image/avif">
+                    <!--Tablet Image-->
+                    <source media="(max-width: 601px) and (max-width: 1024px)" srcset="{% getUrl "/assets/images/g4.jpg" | resize({ width: 630, height: 630 }) | avif %}" type="image/avif">
+                    <!--Desktop Image-->
+                    <source media="(max-width: 1025px)" srcset="{% getUrl "/assets/images/g4.jpg" | resize({ width: 610, height: 800 }) | avif %}" type="image/avif">
+                    <img src="{% getUrl "/assets/images/g4.jpg" | resize({ width: 610, height: 800 }) | jpeg %}" alt="New roof coating applied to flat residential roof" width="305" height="400" loading="lazy" decoding="async">
+                </picture>
+
+                <picture class="cs-image">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/g6.jpeg" | resize({ width: 270, height: 270 }) | avif %}" type="image/avif">
+                    <!--Tablet Image-->
+                    <source media="(max-width: 601px) and (max-width: 1024px)" srcset="{% getUrl "/assets/images/g6.jpeg" | resize({ width: 630, height: 630 }) | avif %}" type="image/avif">
+                    <!--Desktop Image-->
+                    <source media="(max-width: 1025px)" srcset="{% getUrl "/assets/images/g6.jpeg" | resize({ width: 610, height: 800 }) | avif %}" type="image/avif">
+                    <img src="{% getUrl "/assets/images/g6.jpeg" | resize({ width: 610, height: 800 }) | jpeg %}" alt="Home with new asphalt shingle roof and gutters" width="305" height="400" loading="lazy" decoding="async">
+                </picture>
+                <picture class="cs-image">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/g5.jpeg" | resize({ width: 270, height: 270 }) | avif %}" type="image/avif">
+                    <!--Tablet Image-->
+                    <source media="(max-width: 601px) and (max-width: 1024px)" srcset="{% getUrl "/assets/images/g5.jpeg" | resize({ width: 630, height: 630 }) | avif %}" type="image/avif">
+                    <!--Desktop Image-->
+                    <source media="(max-width: 1025px)" srcset="{% getUrl "/assets/images/g5.jpeg" | resize({ width: 1260, height: 800 }) | avif %}" type="image/avif">
+                    <img src="{% getUrl "/assets/images/g5.jpeg" | resize({ width: 1260, height: 800 }) | jpeg %}" alt="Closeup of freshly installed asphalt shingles" width="630" height="400" loading="lazy" decoding="async">
+                </picture>
+            </div>
+        </div>
+        <a class="cs-button-solid" href="/contact/">Get Your Free Quote</a>
+    </div>
+</section> 
+                             
+<!-- ============================================ -->
+<!--                   Reviews                    -->
+<!-- ============================================ -->
+
+<section id="reviews-727">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Client Stories</span>
+            <h2 class="cs-title">What Our Customers Are Saying</h2>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <img class="cs-icon" src="/assets/svgs/quote-2.svg" alt="quote icon" aria-hidden="true" width="40" height="38" loading="lazy" decoding="async">
+                <h3 class="cs-h3">Gutter Cleaning &  Installation, Roof inspection, Roof Installation</h3>
+                <p class="cs-item-text">
+                    Very good quality and price I really liked the work they do I recommend it.
+                </p>
+                <span class="cs-name">Google Review</span>
+            </li>
+            <li class="cs-item">
+                <img class="cs-icon" src="/assets/svgs/quote-2.svg" alt="quote icon" aria-hidden="true" width="40" height="38" loading="lazy" decoding="async">
+                <h3 class="cs-h3">Roof Inspection, Repair, And Installation</h3>
+                <p class="cs-item-text">
+                    Good service, reliable, and trustworthy company.
+                </p>
+                <span class="cs-name">Google Review</span>
+            </li>
+            <li class="cs-item">
+                <img class="cs-icon" src="/assets/svgs/quote-2.svg" alt="quote icon" aria-hidden="true" width="40" height="38" loading="lazy" decoding="async">
+                <h3 class="cs-h3">Roof repair, Skylight repair </h3>
+                <p class="cs-item-text">
+                   Sunny’s Roofing is fantastic. Had a great experience with them and will be using them again in the future!
+                </p>
+                <span class="cs-name">Elizabeth - Google Review</span>
+            </li>
+        </ul>
+    </div>
+</section>
+
+{% include "sections/faq.html" %}
+
+{% include "sections/cta.html" %}
+
+<script defer src="/assets/js/faq.js"></script>
+
+{% endblock %}

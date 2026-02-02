@@ -1,0 +1,138 @@
+---
+title: "Expert Roof Repair Services | Sunnys Roofing"
+description: "Fast, reliable roof repair services for leaks, storm damage, and wear. Expert diagnosis and quality repairs that extend your roof's life. Free estimates."
+permalink: "/roof-repair/"
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="preload" as="image" href="{% getUrl "/assets/images/banner.jpeg" | resize({ width: 640, height: 566 }) | avif %}" />
+    <link rel="stylesheet" href="/assets/css/interior.css">
+{% endblock %}
+
+{% block body %}
+{% from "sections/banner.html" import banner %}
+{{ banner( title="Roof Repair Services" )}}
+
+<!-- ============================================ -->
+<!--                 Content Page                 -->
+<!-- ============================================ -->
+
+<section id="content-page-713">
+    <div class="cs-container">
+        <div class="cs-content">
+            <h1 class="cs-title">Roof Repair Services</h1>
+            <p>
+                Small roof problems rarely stay small. What begins as a minor leak or a few damaged shingles can quickly escalate into extensive water damage, compromised insulation, and costly structural repairs. Our roof repair services address issues promptly and effectively, preventing small problems from becoming major expenses.
+            </p>
+            <p>
+                Whether you're dealing with storm damage, aging materials, or unexpected leaks, our experienced team provides reliable repairs that restore your roof's protection and extend its functional life.
+            </p>
+            
+            <h2>Common Roof Problems We Repair</h2>
+            <p>
+                Pacific Northwest weather creates unique challenges for roofing systems. We diagnose and repair a wide range of roof issues, from obvious damage to subtle problems that most homeowners miss.
+            </p>
+            
+            <h3>Leaks and Water Intrusion</h3>
+            <p>
+                Roof leaks stem from various sources—damaged flashing, cracked shingles, deteriorated sealants, or failed underlayment. We identify the exact source of water intrusion and provide repairs that address the root cause, not just the visible symptoms.
+            </p>
+            
+            <h3>Missing or Damaged Shingles</h3>
+            <p>
+                Wind storms, falling branches, and age-related deterioration can dislodge or damage shingles. Missing shingles expose your roof deck to moisture, while damaged shingles compromise your entire roofing system's weather resistance. We replace damaged shingles and secure any loose areas to restore complete protection.
+            </p>
+            
+            <h3>Flashing Failures</h3>
+            <p>
+                Flashing around chimneys, vents, skylights, and roof valleys represents the most vulnerable points on any roof. When flashing deteriorates or separates, water finds easy entry points into your home. We repair or replace damaged flashing using proper techniques that ensure long-lasting, watertight seals.
+            </p>
+            
+            <h3>Storm and Weather Damage</h3>
+            <p>
+                Heavy rain, high winds, hail, and fallen debris can cause immediate damage requiring prompt attention. We provide emergency repairs to prevent further damage and comprehensive assessments to document all storm-related issues for insurance purposes.
+            </p>
+            
+            <h2>Our Roof Repair Process</h2>
+            <p>
+                Effective repairs require accurate diagnosis. We follow a systematic approach to ensure your repair addresses the actual problem and provides lasting results.
+            </p>
+            
+            <h3>Thorough Inspection and Diagnosis</h3>
+            <p>
+                We begin with a comprehensive roof inspection to identify all issues, including problems that may not be immediately visible. This thorough assessment ensures we address every concern in a single repair visit whenever possible.
+            </p>
+            
+            <h3>Clear Explanation and Estimate</h3>
+            <p>
+                Before beginning any work, we explain exactly what we found, what repairs are necessary, and provide a detailed estimate. You'll understand both the problem and the solution before we start repairs.
+            </p>
+            
+            <h3>Quality Repairs Using Proper Materials</h3>
+            <p>
+                We use manufacturer-approved materials and proven repair techniques that match your existing roofing system. Our repairs integrate seamlessly with your current roof while providing reliable, long-term performance.
+            </p>
+            
+            <h3>Final Inspection and Verification</h3>
+            <p>
+                After completing repairs, we verify that all work meets our quality standards and confirm that your roof is properly protected. We also provide guidance on monitoring your roof and preventing future issues.
+            </p>
+            
+            <h2>Why Choose Us for Roof Repairs</h2>
+            
+            <h3>Accurate Problem Diagnosis</h3>
+            <p>
+                Many roof repairs fail because they address symptoms rather than root causes. Our experienced team identifies exactly what's causing your roof problems and implements repairs that solve the actual issue.
+            </p>
+            
+            <h3>Fast Response When You Need It</h3>
+            <p>
+                Roof problems demand prompt attention. We provide timely service to prevent damage from escalating, with emergency repairs available when immediate protection is necessary.
+            </p>
+            
+            <h3>Honest Repair vs. Replacement Guidance</h3>
+            <p>
+                Not every roof problem requires complete replacement. We provide honest assessments about when repairs make sense and when replacement becomes the better investment, helping you make informed decisions about your home.
+            </p>
+            
+            <h3>Long-Term Solutions</h3>
+            <p>
+                We focus on repairs that last, using quality materials and proper installation techniques. Our goal is solving your roof problem once, not creating a temporary fix that fails months later.
+            </p>
+            
+            <h2>Preventing Future Roof Problems</h2>
+            <p>
+                While some roof damage is unavoidable, regular maintenance and prompt attention to minor issues can prevent many expensive repairs. After completing repairs, we provide specific recommendations for maintaining your roof and extending its lifespan.
+            </p>
+            <p>
+                Simple steps like keeping gutters clean, trimming overhanging branches, and addressing minor issues promptly can significantly extend your roof's functional life and prevent costly emergency repairs.
+            </p>
+            
+            <h2>When to Call for Roof Repairs</h2>
+            <p>
+                Don't wait for small problems to become major issues. Contact us if you notice water stains on ceilings, missing or damaged shingles, granules collecting in gutters, sagging areas, or increased energy costs. Early intervention typically results in simpler, less expensive repairs.
+            </p>
+            <a href="/contact/" class="cs-button-solid">Contact Us Today</a>
+        </div>
+
+        <div class="cs-image-group">
+            <picture class="cs-picture">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/banner.jpeg" | resize({ width: 1, height: 1 }) | avif %}" type="image/avif">
+                <!--Tablet Image-->
+                <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/banner.jpeg" | resize({ width: 666, height: 800 }) | avif %}" type="image/avif">
+                <!--Desktop Image-->
+                <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/banner.jpeg" | resize({ width: 1036, height: 1246 }) | avif %}" type="image/avif"> 
+                <img src="{% getUrl "/assets/images/banner.jpeg" | resize({ width: 1036, height: 1246 }) | jpeg %}" alt="roof repair services" width="518" height="623" loading="lazy" decoding="async" >
+            </picture>
+        </div>
+    </div>
+    <!--Waves Graphic-->
+    <picture class="cs-background"></picture>
+</section>
+
+{% include "sections/cta.html" %}
+
+{% endblock %}

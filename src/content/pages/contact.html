@@ -1,0 +1,142 @@
+---
+title: "Contact | Sunny's Roofing"
+description: "Contact our Edmonds, WA roofing experts for fast inspections, quality repairs, and reliable replacements. Get a free estimate today!"
+permalink: "/contact/"
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="preload" as="image" href="{% getUrl "/assets/images/banner.jpeg" | resize({ width: 640, height: 566 }) | avif %}" />
+    <link rel="stylesheet" href="/assets/css/contact.css">
+{% endblock %}
+
+{% block body %}
+
+{% from "sections/banner.html" import banner %}
+{{ banner( title="Contact Us" )}}
+
+<!-- ============================================ -->
+<!--                   Contact                    -->
+<!-- ============================================ -->
+
+<section id="contact-1388">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Contact Us</span>
+            <h1 class="cs-title">Need A New Roof</h1>
+            <p class="cs-text">
+                Have roofing concerns? Get in touch and our team will assess your home.
+            </p>
+            <ul class="cs-ul">
+                <li class="cs-li">
+                    <picture class="cs-icon-wrapper">
+                        <img aria-hidden="true" src="/assets/svgs/phone-76.svg" alt="phone icon" class="cs-icon" width="40" height="40" decoding="async">
+                    </picture>
+                    <div class="cs-flex-group">
+                        <span class="cs-header">Phone</span>
+                        <a href="tel:{{client.phoneForTel}}" class="cs-link">
+                            {{client.phoneFormatted}}
+                        </a>
+                    </div>
+                </li>
+                <li class="cs-li">
+                    <picture class="cs-icon-wrapper">
+                        <img aria-hidden="true" src="/assets/svgs/mail.svg" alt="address icon" class="cs-icon" width="40" height="40" decoding="async">
+                    </picture>
+                    <div class="cs-flex-group">
+                        <span class="cs-header">Email</span>
+                        <a href="mailto:{{client.email}}" class="cs-link">Click To Email</a>
+                    </div>
+                </li>
+                <li class="cs-li">
+                    <picture class="cs-icon-wrapper">
+                        <img aria-hidden="true" src="/assets/svgs/location.svg" alt="address icon" class="cs-icon" width="40" height="40" decoding="async">
+                    </picture>
+                    <div class="cs-flex-group">
+                        <span class="cs-header">Service Area</span>
+                        <a href="{{ client.mapLink }}" target="_blank" class="cs-link">Serving Edmonds & Greater Seattle Area</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!--Form-->
+        <form class="cs-form" id="cs-form-1388" name="Contact Form" method="post" data-netlify="true">
+            <h3 class="cs-h3">Make Appointment</h3>
+            <label class="cs-label">
+                Name
+                <input class="cs-input" required type="text" id="name-1388" name="name" placeholder="Name">
+            </label>
+            <label class="cs-label cs-email">
+                Email
+                <input class="cs-input" required type="email" id="email-1388" name="email" placeholder="Email">
+            </label>
+            <label class="cs-label cs-phone">
+                Phone
+                <input class="cs-input" required type="number" id="phone-1388" name="phone" placeholder="Phone">
+            </label>
+             <label class="cs-label" for="service-1388">
+                Service
+                <div class="cs-dropdown">
+                    <select class="cs-select" id="service-1388" name="service" placeholder="Select A Service" required>
+                        <option value="" disabled selected>Select a Service</option>
+                        <option value="full roof replacement">Full Roof Replacement</option>
+                        <option value="roof installation">Roof Installation (New Construction)</option>
+                        <option value="strom damage repair">Storm Damage Repair</option>
+                        <option value="emergency roof repair">Emergency Roof Repair</option>
+                        <option value="metal roof installation">Metal Roof installation</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <img src="/assets/svgs/chev-down.svg" alt="icon" loading="lazy" decoding="async"  width="20"  height="20" aria-hidden="true" />
+                </div>
+            </label>
+            <div class="cs-span-12" data-netlify-recaptcha="true"></div>
+            <label class="cs-label">
+                Message
+                <textarea class="cs-input cs-textarea" required name="Message" id="message-1388" placeholder="Write message..."></textarea>
+            </label>
+            <button class="cs-button-solid cs-submit" type="submit">Send Message</button>
+        </form>
+    </div>
+</section>
+          
+<!-- ============================================ -->
+<!--                   Reviews                    -->
+<!-- ============================================ -->
+
+<section id="reviews-727">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Client Stories</span>
+            <h2 class="cs-title">What Our Customers Are Saying</h2>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <img class="cs-icon" src="/assets/svgs/quote-2.svg" alt="quote icon" aria-hidden="true" width="40" height="38" loading="lazy" decoding="async">
+                <h3 class="cs-h3">Gutter Cleaning &  Installation, Roof inspection, Roof Installation</h3>
+                <p class="cs-item-text">
+                    Very good quality and price I really liked the work they do I recommend it.
+                </p>
+                <span class="cs-name">Google Review</span>
+            </li>
+            <li class="cs-item">
+                <img class="cs-icon" src="/assets/svgs/quote-2.svg" alt="quote icon" aria-hidden="true" width="40" height="38" loading="lazy" decoding="async">
+                <h3 class="cs-h3">Roof Inspection, Repair, And Installation</h3>
+                <p class="cs-item-text">
+                    Good service, reliable, and trustworthy company.
+                </p>
+                <span class="cs-name">Google Review</span>
+            </li>
+            <li class="cs-item">
+                <img class="cs-icon" src="/assets/svgs/quote-2.svg" alt="quote icon" aria-hidden="true" width="40" height="38" loading="lazy" decoding="async">
+                <h3 class="cs-h3">Roof repair, Skylight repair </h3>
+                <p class="cs-item-text">
+                   Sunny’s Roofing is fantastic. Had a great experience with them and will be using them again in the future!
+                </p>
+                <span class="cs-name">Elizabeth - Google Review</span>
+            </li>
+        </ul>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,94 @@
+<!-- ============================================ -->
+<!--                 Navigation                   -->
+<!-- ============================================ -->
+
+<header id="cs-navigation">
+    <div class="cs-container">
+        <!--Nav Logo-->
+        <a href="/" class="cs-logo" aria-label="go back to home">
+            <img fetchpriority="high" src="/assets/svgs/logo-black.svg"  width="210" height="29" alt="company logo" aria-hidden="true" decoding="async">
+        </a>
+        <!--Navigation List-->
+        <nav class="cs-nav">
+            <!--Mobile Nav Toggle-->
+            <button class="cs-toggle" aria-expanded="false" aria-haspopup="true" aria-controls="cs-expanded" aria-label="Mobile menu toggle">
+                <div class="cs-box" aria-hidden="true">
+                    <span class="cs-line cs-line1" aria-hidden="true"></span>
+                    <span class="cs-line cs-line2" aria-hidden="true"></span>
+                    <span class="cs-line cs-line3" aria-hidden="true"></span>
+                </div>
+            </button>
+            <!-- We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
+            <div class="cs-ul-wrapper">
+                <ul id="cs-expanded" class="cs-ul" aria-hidden="true">
+                    <li class="cs-li">
+                        <a href="/" class="cs-li-link {% if page.url == "/" %} cs-active {% endif %}" {% if page.url == "/" %} aria-current="page" {% endif %}>
+                            Home
+                        </a>
+                    </li>
+                    <li class="cs-li">
+                        <a href="/about/" class="cs-li-link {% if page.url == "/about/" %} cs-active {% endif %}" {% if page.url == "/about/" %} aria-current="page" {% endif %}>
+                            About
+                        </a>
+                    </li>
+                    <!--Copy and paste this cs-dropdown list item and replace any .cs-li with this cs-dropdown group to make a new dropdown and it will work-->
+                    <li class="cs-li cs-dropdown" tabindex="0">
+                        <span class="cs-li-link {{ 'cs-active' if page.fileSlug in ['roof-replacement', 'roof-repair', 'metal-roof-installation', 'new-roof-installation', 'storm-damage-repair'] }}">
+                        Services
+                        <img class="cs-drop-icon" src="/assets/svgs/chev-down.svg" alt="dropdown icon" width="24" height="24" decoding="async" aria-hidden="true" />
+                        </span>
+                        <ul class="cs-drop-ul">
+                            <li class="cs-drop-li">
+                                <a href="/roof-replacements/" class="cs-li-link cs-drop-link">
+                                Roof Replacements
+                                </a>
+                            </li>
+                            <li class="cs-drop-li">
+                                <a href="/roof-repair/" class="cs-li-link cs-drop-link">
+                                Roof Repair Services
+                                </a>
+                            </li>
+                            <li class="cs-drop-li">
+                                <a href="/metal-roof-installation/" class="cs-li-link cs-drop-link">
+                                Metal Roof Installation
+                                </a>
+                            </li>
+                            <li class="cs-drop-li">
+                                <a href="/new-roof-installation/" class="cs-li-link cs-drop-link">
+                                New Roof Installation
+                                </a>
+                            </li>
+                            <li class="cs-drop-li">
+                                <a href="/storm-damage-repair/" class="cs-li-link cs-drop-link">
+                                Storm Damage Repair
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                     <li class="cs-li">
+                        <a href="/gallery/" class="cs-li-link {% if page.url == "/gallery/" %} cs-active {% endif %}" {% if page.url == "/gallery/" %} aria-current="page" {% endif %}>
+                            Gallery
+                        </a>
+                    </li>
+                    <li class="cs-li">
+                        <a href="/faq/" class="cs-li-link {% if '/faq/' in page.url %} cs-active {% endif %}" {% if page.url == "/faq/" %} aria-current="page" {% endif %}>
+                           FAQ
+                        </a>
+                    </li>
+                    <li class="cs-li">
+                        <a href="/contact/" class="cs-li-link {% if page.url == "/contact/" %} cs-active {% endif %}" {% if page.url == "/contact/" %} aria-current="page" {% endif %}>
+                            Contact
+                        </a>
+                    </li>
+                    <li class="cs-li cs-hide-on-mobile">
+                        <a href="/contact/" class="cs-button-outline cs-button-nav">Get a Free Estimate</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <button id="dark-mode-toggle" aria-label="dark mode toggle">
+            <img class="cs-moon" aria-hidden="true" src="/assets/svgs/moon.svg" decoding="async" alt="moon" width="15" height="15">
+            <img class="cs-sun" aria-hidden="true" src="/assets/svgs/sun.svg" decoding="async" alt="sun" width="15" height="15">
+        </button>
+    </div>
+</header>
