@@ -13,21 +13,21 @@
 @media only screen and (min-width: 0rem) {
     /* All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
     :root {
-        --primary: #007FFF;
-        --primaryLight: #CCE5FF;
+        --primary: #AC651E;
+        --primaryLight: #EEE0D2;
 
-        --background-alt: #F2F9FF;
+        --background-alt: #FBF7F4;
         --background: #fff;
         
-        --secondary: #FD5118;
+        --secondary: #AC651E;
         --secondaryLight: #FD5118;
         --headerColor: #0B0F13;
         --bodyTextColor: #454647;
         --bodyTextColorWhite: #fafbfc;
 
         /* Dark Mode Styles */
-        --dark: #082032;
-        --medium: #2c394b;
+        --dark: #0F0802;
+        --medium: #3c3633;
         --accent: #334756;
 
         /* 13px - 16px */
@@ -38,8 +38,8 @@
         /* 60px - 140px top and bottom */
         --sectionPadding: clamp(3.75rem, 7.82vw, 8.75rem) 1rem;
 
-        --headerFont: "DM Serif Text", Arial, sans-serif;
-        --bodyFont: "Public Sans", Arial, sans-serif;
+        --headerFont: "Scheherazade New", serif;
+        --bodyFont: "Geist", Arial, sans-serif;
     }
 
     html,
@@ -83,6 +83,7 @@
         margin: 0 0 1rem 0;
         color: var(--headerColor);
         position: relative;
+        letter-spacing: -0.032rem;
     }
 
     .cs-text {
@@ -144,7 +145,7 @@
 
         &:focus,
         &:hover {
-            background-color: var(--secondary);
+            background-color: var(--secondaryLight);
             color: var(--bodyTextColorWhite);
         }
     }
@@ -237,6 +238,7 @@
         font-family: var(--headerFont);
         line-height: 1.2em;
         color: var(--headerColor);
+        letter-spacing: -0.032rem;
     }
 
     p,
@@ -282,31 +284,34 @@
 @media only screen and (min-width: 0rem) {
     @font-face {
         font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-        font-family: 'DM Serif Text';
+        font-family: 'Scheherazade New';
         font-style: normal;
         font-weight: 400;
-        src: url('/assets/fonts/dm-serif-text-v13-latin-regular.woff2') format('woff2'), 
-        url('/assets/fonts/dm-serif-text-v13-latin-regular.woff') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        src: url('/assets/fonts/scheherazade-new-v20-latin-regular.woff2') format('woff2');
     }
 
-   /* public-sans-regular - latin */
     @font-face {
         font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-        font-family: 'Public Sans';
+        font-family: 'Scheherazade New';
+        font-style: normal;
+        font-weight: 600;
+        src: url('/assets/fonts/scheherazade-new-v20-latin-600.woff2') format('woff2');
+    }
+
+    @font-face {
+        font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: 'Geist';
         font-style: normal;
         font-weight: 400;
-        src: url('/assets/fonts/public-sans-v21-latin-regular.woff2') format('woff2'), 
-        url('/assets/fonts/public-sans-v21-latin-regular.woff2') format('woff1'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        src: url('/assets/fonts/geist-v4-latin-regular.woff2') format('woff2');
     }
 
-    /* public-sans-700 - latin */
     @font-face {
         font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-        font-family: 'Public Sans';
+        font-family: 'Geist';
         font-style: normal;
-        font-weight: 700;
-        src: url('/assets/fonts/public-sans-v21-latin-700.woff2') format('woff2'), 
-        url('/assets/fonts/public-sans-v21-latin-700.woff2') format('woff') /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        font-weight: 600;
+        src: url('/assets/fonts/geist-v4-latin-600.woff2') format('woff2');
     }
 }
 
@@ -456,7 +461,7 @@
 
         .cs-logo {
             width: 40%;
-            max-width: (146/16rem);
+            max-width: (64/16rem);
             height: 100%;
             margin: 0 auto 0 0;
             /* prevents padding and border from affecting height and width */
@@ -653,7 +658,7 @@
             background-color: var(--dark);
 
             .cs-logo {
-                content: url("/assets/svgs/logo-dark.svg");
+                filter: brightness(0) invert(1);
             }
 
             .cs-line {
@@ -945,8 +950,8 @@
 
         .cs-logo {
             width: 18.4%;
-            max-width: (350/16rem);
-            height: (65/16rem);
+            max-width: (133/16rem);
+            height: (94/16rem);
             /* margin-right auto pushes everything away from it to the right */
             margin: 0 auto 0 0;
             padding: 0;
@@ -1007,7 +1012,7 @@
             background-color: var(--dark);
 
             .cs-logo {
-                content: url("/assets/svgs/logo-dark.svg");
+                filter: brightness(0) invert(1);
             }
 
             .cs-li-link {

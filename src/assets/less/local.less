@@ -36,6 +36,7 @@
             flex-direction: column;
             /* 48px - 64px */
             gap: clamp(3rem, 6vw, 4rem);
+            max-width: (1720/16rem);
         }
 
         .cs-card-group {
@@ -77,7 +78,7 @@
         }
 
         .cs-icon {
-            width: (32/16rem);
+            width: (48/16rem);
             height: auto;
         }
 
@@ -93,6 +94,7 @@
             align-items: flex-start;
             gap: (12/16em);
             transition: color .3s;
+            margin-bottom: (12/16rem);
         }
 
         .cs-item-text {
@@ -225,9 +227,7 @@
                 content: '';
                 width: 100%;
                 height: 100%;
-                background-color: var(--primary);
-                opacity: 0.1;
-                border-radius: (16/16rem);
+                background-color: #FBF7F4;
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -243,15 +243,13 @@
         .cs-rating {
             display: flex;
             flex-direction: column;
-            gap: (4/16rem);
+            gap: (8/16rem);
         }
 
         .cs-h3 {
-            font-size: (20/16rem);
-            font-weight: 400;
+            font-size: (28/16rem);
             line-height: 1.2em;
             margin: 0;
-            font-family: var(--bodyFont);
             color: var(--headerColor);
             display: flex;
             justify-content: flex-start;
@@ -266,6 +264,15 @@
             width: 100%;
             margin: 0;
             color: var(--bodyTextColor);
+            max-width: 40ch;
+        }
+
+        .cs-floater {
+            height: (60/16rem);
+            width: auto;
+            position: absolute;
+            bottom: 0;
+            right: 0;
         }
 
         .cs-icon {
@@ -316,9 +323,9 @@
             align-items: flex-start;
             position: absolute;
             /* 12px - 24px */
-            right: clamp(0.75rem, 2.5vw, 1.5rem);
+            right: clamp(0.75rem, 2.5vw, (40/16rem));
             /* 12px - 24px */
-            bottom: clamp(0.75rem, 2.5vw, 1.5rem);
+            bottom: clamp(0.75rem, 2.5vw, (40/16rem));
         }
 
         .cs-box-icon {
@@ -391,10 +398,14 @@
             .cs-box-text {
                 opacity: 0.8;
             }
+
+            .cs-ratings::before {
+                opacity: 0.2;
+            }
         }
     }
 }
-                                
+                        
 /*-- -------------------------- -->
 <---       Why Choose Us        -->
 <--- -------------------------- -*/
@@ -471,6 +482,10 @@
             }
         }
 
+        .cs-title {
+            max-width: 20ch;
+        }
+
         .cs-card-group {
             width: 100%;
             margin: 0;
@@ -503,6 +518,10 @@
             align-items: center;
             gap: (12/16rem);
             transition: color 0.3s;
+        }
+
+        .cs-h3-text {
+            max-width: 16ch;
         }
 
         .cs-wrapper {
@@ -598,7 +617,7 @@
                     
 
 /*-- -------------------------- -->
-<---          Services          -->
+<---     Additional Services    -->
 <--- -------------------------- -*/
 
 /* Mobile - 360px */
@@ -659,14 +678,9 @@
         }
 
         .cs-content {
-            /* set text align to left if content needs to be left aligned */
-            text-align: center;
             width: 100%;
-            max-width: (800/16rem);
             display: flex;
             flex-direction: column;
-            /* centers content horizontally, set to flex-start to left align */
-            align-items: center;
         }
 
         .cs-text {
@@ -674,13 +688,12 @@
             line-height: 1.5em;
             text-align: inherit;
             width: 100%;
-            max-width: (650/16rem);
+            max-width: (810/16rem);
             margin: 0;
             color: var(--bodyTextColor);
         }
 
-        .cs-title,
-        .cs-text {
+        .cs-title {
             max-width: 100%;
         }
 
@@ -761,7 +774,6 @@
             /* 20px - 25px */
             font-size: clamp(1.25rem, 2.5vw, 1.5625rem);
             line-height: 1.2em;
-            font-weight: 400;
             text-align: inherit;
             margin: 0 0 (12/16rem) 0;
             color: var(--headerColor);
@@ -771,7 +783,6 @@
             /* 14px - 16px */
             font-size: clamp(0.875rem, 1.5vw, 1rem);
             line-height: 1.5em;
-            max-width: (300/16rem);
             margin: 0 0 (32/16rem) 0;
             padding: 0;
             color: var(--bodyTextColor);
@@ -972,7 +983,6 @@
             /* 20px - 25px */
             font-size: clamp(1.25rem, 2vw, 1.5625rem);
             line-height: 1.2em;
-            font-weight: 400;
             margin: 0;
             color: var(--headerColor);
             display: block;
