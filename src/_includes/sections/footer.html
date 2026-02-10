@@ -6,39 +6,45 @@
     <div class="cs-container">
         <div class="cs-top">
             <a aria-label="go back to home" class="cs-logo" href="">
-                <img class="cs-logo-img" loading="lazy" decoding="async" src="/assets/svgs/logo-dark.svg" alt="logo" width="209" height="40">
+                <img class="cs-logo-img" loading="lazy" decoding="async" src="/assets/svgs/logo.svg" alt="logo">
             </a>
             <ul class="cs-ul">
                 <li class="cs-li">
-                    <a href="/" class="cs-link">Home</a>
+                    <a href="/" class="cs-link {% if page.url == "/" %} cs-active {% endif %}">Home</a>
                 </li>
                 <li class="cs-li">
-                    <a href="/about/" class="cs-link">About</a>
+                    <a href="/services/" class="cs-link {% if page.url == "/services/" %} cs-active {% endif %}">Services</a>
                 </li>
                 <li class="cs-li">
-                    <a href="/gallery/" class="cs-link">Gallery</a>
+                    <a href="/about/" class="cs-link {% if page.url == "/about/" %} cs-active {% endif %}">About</a>
                 </li>
                 <li class="cs-li">
-                    <a href="/faq/" class="cs-link">FAQ</a>
+                    <a href="/projects/" class="cs-link {% if page.url == "/projects/" %} cs-active {% endif %}">Projects</a>
                 </li>
                 <li class="cs-li">
-                    <a href="/contact/" class="cs-link">Contact</a>
+                    <a href="/reviews/" class="cs-link {% if page.url == "/reviews/" %} cs-active {% endif %}">Reviews</a>
+                </li>
+                <li class="cs-li">
+                    <a href="/contact/" class="cs-link {% if page.url == "/contact/" %} cs-active {% endif %}">Contact</a>
                 </li>
             </ul>
         </div>
         <div class="cs-bottom">
             <!--Social-->
-            <ul class="cs-social">
+            <!-- <ul class="cs-social">
                 <li class="cs-social-li">
                     <a href="{{client.socials.facebook}}" class="cs-social-link" aria-label="facebook" target="_blank" rel="noopener">
                         <img class="cs-social-icon cs-default" src="/assets/svgs/facebook.svg" alt="icon" loading="lazy" decoding="async" width="12" height="12" aria-hidden="true">
                     </a>
                 </li>
-            </ul>
+            </ul> -->
             <span class="cs-copyright">
-               © Copyright {% year %} - Designed & Hand Coded By <a target="_blank" href="https://oakharborwebdesigns.com/">Oak Harbor Web Designs</a>
+               © Copyright {% year %} <a target="_blank" href="{{client.domain}}">Legacy Roofing LLC</a>. All rights reserved.
             </span>
         </div>
+        <picture class="cs-floater">
+            <img src="/assets/svgs/roof-floater.svg" loading="lazy" decoding="async" alt="roof floater"/>
+        </picture>
     </div>
 </footer>
                                 
