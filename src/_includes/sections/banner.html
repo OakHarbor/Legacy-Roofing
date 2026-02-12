@@ -9,7 +9,19 @@
     </div>
     <!--Background Image-->
     <picture class="cs-background">
-        <img src="/assets/images/g3.jpg" alt="sky view of neighborhood roofing" decoding="async">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/g3.jpg" | resize({ width: 640, height: 566 }) | avif %}" type="image/avif">
+        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/g3.jpg" | resize({ width: 640, height: 566 }) | webp %}" type="image/webp">
+        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/g3.jpg" | resize({ width: 640, height: 566 }) | jpeg %}" type="image/jpeg">
+        <!--Tablet Image-->
+        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/g3.jpg" | resize({ width: 2048, height: 904 }) | avif %}" type="image/avif">
+        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/g3.jpg" | resize({ width: 2048, height: 904 }) | webp %}" type="image/webp">
+        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/g3.jpg" | resize({ width: 2048, height: 904 }) | jpeg %}" type="image/jpeg">
+        <!--Desktop Image-->
+        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/g3.jpg" | resize({ width: 2500, height: 603 }) | avif %}" type="image/avif">
+        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/g3.jpg" | resize({ width: 2500, height: 603 }) | webp %}" type="image/webp">
+        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/g3.jpg" | resize({ width: 2500, height: 603 }) | jpeg %}" type="image/jpeg">
+        <img src="{% getUrl "/assets/images/g3.jpg" | resize({ width: 2500, height: 603 }) | jpeg %}" alt="Sky view of neighborhood roofing." width="1920" height="463" decoding="async">
     </picture>
 </div>
 

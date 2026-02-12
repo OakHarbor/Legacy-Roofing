@@ -9,7 +9,6 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
 
 {% block head %}
     <!-- Critical styles are loaded first -->
-    <link rel="preload" as="image" href="{% getUrl "/assets/images/hero.jpeg" | resize({ width: 640, height: 1000 }) | avif %}" />
     <link rel="stylesheet" href="/assets/css/critical.css"/>
 
     <!-- If we're in production, defer the rest of the home page styles. In development, always load it. Otherwise the site will break when hot-reload is used. -->
@@ -50,10 +49,22 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
 
     <!-- Background Image -->
     <picture class="cs-background">
-        <img src="/assets/images/hero.jpg"/>
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/hero.jpg" | resize({ width: 640, height: 1632 }) | avif %}" type="image/avif">
+        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/hero.jpg" | resize({ width: 640, height: 1632 }) | webp %}" type="image/webp">
+        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/hero.jpg" | resize({ width: 640, height: 1632 }) | jpeg %}" type="image/jpeg">
+        <!--Tablet Image-->
+        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/hero.jpg" | resize({ width: 2048, height: 1988 }) | avif %}" type="image/avif">
+        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/hero.jpg" | resize({ width: 2048, height: 1988 }) | webp %}" type="image/webp">
+        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/hero.jpg" | resize({ width: 2048, height: 1988 }) | jpeg %}" type="image/jpeg">
+        <!--Desktop Image-->
+        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/hero.jpg" | resize({ width: 2500, height: 1385 }) | avif %}" type="image/avif">
+        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/hero.jpg" | resize({ width: 2500, height: 1385 }) | webp %}" type="image/webp">
+        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/hero.jpg" | resize({ width: 2500, height: 1385 }) | jpeg %}" type="image/jpeg">
+        <img src="{% getUrl "/assets/images/hero.jpg" | resize({ width: 2500, height: 1385 }) | jpeg %}" alt="Aerial view showcasing a well-maintained residential neighborhood with a variety of roof styles and conditions." width="1920" height="1064" decoding="async">
     </picture>
 </section>
-                         
+
 <!-- ============================================ -->
 <!--                    Services                  -->
 <!-- ============================================ -->
@@ -62,7 +73,7 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
     <div class="cs-container">
         <ul class="cs-card-group">
             <li class="cs-item">
-                <a href="/roof-replacements/" class="cs-item-link">
+                <a href="/contact/" class="cs-item-link">
                     <h2 class="cs-h3">
                         <img class="cs-icon" src="/assets/svgs/s1.svg" loading="lazy" decoding="async" alt="icon" width="32" height="32" aria-hidden="true">
                         Shingle Roofing
@@ -73,7 +84,7 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
                 </a>
             </li>
             <li class="cs-item">
-                <a href="/roof-repair/" class="cs-item-link">
+                <a href="/contact/" class="cs-item-link">
                     <h2 class="cs-h3">
                         <img class="cs-icon" src="/assets/svgs/s2.svg" loading="lazy" decoding="async" alt="icon" width="32" height="32" aria-hidden="true">
                         Metal Roofing
@@ -84,7 +95,7 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
                 </a>
             </li>
             <li class="cs-item">
-                <a href="/metal-roof-installation/" class="cs-item-link">
+                <a href="/contact/" class="cs-item-link">
                     <h2 class="cs-h3">
                         <img class="cs-icon" src="/assets/svgs/s3.svg" loading="lazy" decoding="async" alt="icon" width="32" height="32" aria-hidden="true">
                         Commercial Roofing
@@ -95,7 +106,7 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
                 </a>
             </li>
             <li class="cs-item">
-                <a href="/new-roof-installation/" class="cs-item-link">
+                <a href="/contact/" class="cs-item-link">
                     <h2 class="cs-h3">
                         <img class="cs-icon" src="/assets/svgs/s4.svg" loading="lazy" decoding="async" alt="icon" width="32" height="32" aria-hidden="true">
                         Gutters
@@ -106,7 +117,7 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
                 </a>
             </li>
             <li class="cs-item">
-                <a href="/storm-damage-repair/" class="cs-item-link">
+                <a href="/contact/" class="cs-item-link">
                     <h2 class="cs-h3">
                         <img class="cs-icon" src="/assets/svgs/s5.svg" loading="lazy" decoding="async" alt="icon" width="32" height="32" aria-hidden="true">
                         Siding
@@ -151,7 +162,19 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
         </div>
         <div class="cs-image-group">
             <picture class="cs-background">
-                <img src="/assets/images/c1.jpg"/>
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/c1.jpg" | resize({ width: 576, height: 960 }) | avif %}" type="image/avif">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/c1.jpg" | resize({ width: 576, height: 960 }) | webp %}" type="image/webp">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/c1.jpg" | resize({ width: 576, height: 960 }) | jpeg %}" type="image/jpeg">
+                <!--Tablet Image-->
+                <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/c1.jpg" | resize({ width: 930, height: 1360 }) | avif %}" type="image/avif">
+                <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/c1.jpg" | resize({ width: 930, height: 1360 }) | webp %}" type="image/webp">
+                <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/c1.jpg" | resize({ width: 930, height: 1360 }) | jpeg %}" type="image/jpeg">
+                <!--Desktop Image-->
+                <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/c1.jpg" | resize({ width: 1260, height: 1378 }) | avif %}" type="image/avif">
+                <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/c1.jpg" | resize({ width: 1260, height: 1378 }) | webp %}" type="image/webp">
+                <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/c1.jpg" | resize({ width: 1260, height: 1378 }) | jpeg %}" type="image/jpeg">
+                <img src="{% getUrl "/assets/images/c1.jpg" | resize({ width: 1260, height: 1378 }) | jpeg %}" width="630" height="689" loading="lazy" decoding="async" alt="A modern home with a well-maintained asphalt shingle roof, featuring clean lines, proper gutter systems, and contrasting trim.">
             </picture>
             <div class="cs-box">
                 <img class="cs-box-icon" loading="lazy" decoding="async" src="/assets/svgs/owner.svg" width="60" height="60">
@@ -174,7 +197,19 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
     <div class="cs-container">
         <div class="cs-flex">
             <picture class="cs-picture">
-                <img src="/assets/images/c2.jpg">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/c2.jpg" | resize({ width: 576, height: 320 }) | avif %}" type="image/avif">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/c2.jpg" | resize({ width: 576, height: 320 }) | webp %}" type="image/webp">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/c2.jpg" | resize({ width: 576, height: 320 }) | jpeg %}" type="image/jpeg">
+                <!--Tablet Image-->
+                <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/c2.jpg" | resize({ width: 864, height: 800 }) | avif %}" type="image/avif">
+                <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/c2.jpg" | resize({ width: 864, height: 800 }) | webp %}" type="image/webp">
+                <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/c2.jpg" | resize({ width: 864, height: 800 }) | jpeg %}" type="image/jpeg">
+                <!--Desktop Image-->
+                <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/c2.jpg" | resize({ width: 1216, height: 858 }) | avif %}" type="image/avif">
+                <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/c2.jpg" | resize({ width: 1216, height: 858 }) | webp %}" type="image/webp">
+                <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/c2.jpg" | resize({ width: 1216, height: 858 }) | jpeg %}" type="image/jpeg">
+                <img src="{% getUrl "/assets/images/c2.jpg" | resize({ width: 1216, height: 858 }) | jpeg %}" alt="A complex roof design with multiple gables, valleys, and dormers, all covered in high-quality asphalt shingles" width="608" height="429" loading="lazy" decoding="async">
             </picture>
 
             <div class="cs-content">
@@ -262,12 +297,18 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
                 <!--Background Image-->
                 <picture class="cs-background">
                     <!--Mobile Image-->
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/c3.jpeg" | resize({ width: 576, height: 576 }) | avif %}" type="image/avif">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/faq.jpg" | resize({ width: 576, height: 534 }) | avif %}" type="image/avif">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/faq.jpg" | resize({ width: 576, height: 534 }) | webp %}" type="image/webp">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/faq.jpg" | resize({ width: 576, height: 534 }) | jpeg %}" type="image/jpeg">
                     <!--Tablet Image-->
-                    <source media="(max-width: 601px) and (max-width: 1024px)" srcset="{% getUrl "/assets/images/c3.jpeg" | resize({ width: 962, height: 638 }) | avif %}" type="image/avif">
+                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/faq.jpg" | resize({ width: 962, height: 592 }) | avif %}" type="image/avif">
+                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/faq.jpg" | resize({ width: 962, height: 592 }) | webp %}" type="image/webp">
+                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/faq.jpg" | resize({ width: 962, height: 592 }) | jpeg %}" type="image/jpeg">
                     <!--Desktop Image-->
-                    <source media="(max-width: 1025px)" srcset="{% getUrl "/assets/images/c3.jpeg" | resize({ width: 1250, height: 650 }) | avif %}" type="image/avif">
-                    <img src="{% getUrl "/assets/images/c3.jpeg" | resize({ width: 1250, height: 650 }) | jpeg %}" alt="New shingle roof installation on residential home" width="625" height="325" loading="lazy" decoding="async">
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/faq.jpg" | resize({ width: 1250, height: 554 }) | avif %}" type="image/avif">
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/faq.jpg" | resize({ width: 1250, height: 554 }) | webp %}" type="image/webp">
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/faq.jpg" | resize({ width: 1250, height: 554 }) | jpeg %}" type="image/jpeg">
+                    <img src="{% getUrl "/assets/images/faq.jpg" | resize({ width: 1250, height: 554 }) | jpeg %}" alt="A new house under construction with a modern, dark-colored tile roof." width="625" height="277" loading="lazy" decoding="async">
                 </picture>
             </li>
             <li class="cs-item">
@@ -282,12 +323,18 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
                 <!--Background Image-->
                 <picture class="cs-background">
                     <!--Mobile Image-->
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/c4.jpeg" | resize({ width: 576, height: 576 }) | avif %}" type="image/avif">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/c1.jpg" | resize({ width: 576, height: 534 }) | avif %}" type="image/avif">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/c1.jpg" | resize({ width: 576, height: 534 }) | webp %}" type="image/webp">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/c1.jpg" | resize({ width: 576, height: 534 }) | jpeg %}" type="image/jpeg">
                     <!--Tablet Image-->
-                    <source media="(max-width: 601px) and (max-width: 1024px)" srcset="{% getUrl "/assets/images/c4.jpeg" | resize({ width: 962, height: 638 }) | avif %}" type="image/avif">
+                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/c1.jpg" | resize({ width: 962, height: 592 }) | avif %}" type="image/avif">
+                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/c1.jpg" | resize({ width: 962, height: 592 }) | webp %}" type="image/webp">
+                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/c1.jpg" | resize({ width: 962, height: 592 }) | jpeg %}" type="image/jpeg">
                     <!--Desktop Image-->
-                    <source media="(max-width: 1025px)" srcset="{% getUrl "/assets/images/c4.jpeg" | resize({ width: 1250, height: 650 }) | avif %}" type="image/avif">
-                    <img src="{% getUrl "/assets/images/c4.jpeg" | resize({ width: 1250, height: 650 }) | jpeg %}" alt="Roofing work in progress on multi-story home" width="625" height="325" loading="lazy" decoding="async">
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/c1.jpg" | resize({ width: 1250, height: 554 }) | avif %}" type="image/avif">
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/c1.jpg" | resize({ width: 1250, height: 554 }) | webp %}" type="image/webp">
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/c1.jpg" | resize({ width: 1250, height: 554 }) | jpeg %}" type="image/jpeg">
+                    <img src="{% getUrl "/assets/images/c1.jpg" | resize({ width: 1250, height: 554 }) | jpeg %}" alt="A modern home with a well-maintained asphalt shingle roof, featuring clean lines, proper gutter systems, and contrasting trim." width="625" height="277" loading="lazy" decoding="async">
                 </picture>
             </li>
             <li class="cs-item">
@@ -302,12 +349,18 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
                 <!--Background Image-->
                 <picture class="cs-background">
                     <!--Mobile Image-->
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/c5.jpeg" | resize({ width: 576, height: 534 }) | avif %}" type="image/avif">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/sbs2.jpg" | resize({ width: 576, height: 534 }) | avif %}" type="image/avif">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/sbs2.jpg" | resize({ width: 576, height: 534 }) | webp %}" type="image/webp">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/sbs2.jpg" | resize({ width: 576, height: 534 }) | jpeg %}" type="image/jpeg">
                     <!--Tablet Image-->
-                    <source media="(max-width: 601px) and (max-width: 1024px)" srcset="{% getUrl "/assets/images/c5.jpeg" | resize({ width: 962, height: 698 }) | avif %}" type="image/avif">
+                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/sbs2.jpg" | resize({ width: 962, height: 546 }) | avif %}" type="image/avif">
+                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/sbs2.jpg" | resize({ width: 962, height: 546 }) | webp %}" type="image/webp">
+                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/sbs2.jpg" | resize({ width: 962, height: 546 }) | jpeg %}" type="image/jpeg">
                     <!--Desktop Image-->
-                    <source media="(max-width: 1025px)" srcset="{% getUrl "/assets/images/c5.jpeg" | resize({ width: 1250, height: 650 }) | avif %}" type="image/avif">
-                    <img src="{% getUrl "/assets/images/c5.jpeg" | resize({ width: 1250, height: 650 }) | jpeg %}" alt="Asphalt shingle roof being installed" width="625" height="325" loading="lazy" decoding="async">
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/sbs2.jpg" | resize({ width: 1250, height: 554 }) | avif %}" type="image/avif">
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/sbs2.jpg" | resize({ width: 1250, height: 554 }) | webp %}" type="image/webp">
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/sbs2.jpg" | resize({ width: 1250, height: 554 }) | jpeg %}" type="image/jpeg">
+                    <img src="{% getUrl "/assets/images/sbs2.jpg" | resize({ width: 1250, height: 554 }) | jpeg %}" alt="A multi-story building with blue siding and a visible chimney." width="625" height="277" loading="lazy" decoding="async">
                 </picture>
             </li>
             <li class="cs-item">
@@ -322,12 +375,18 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
                 <!--Background Image-->
                 <picture class="cs-background">
                     <!--Mobile Image-->
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/c6.jpeg" | resize({ width: 576, height: 582 }) | avif %}" type="image/avif">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/c12.jpg" | resize({ width: 576, height: 492 }) | avif %}" type="image/avif">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/c12.jpg" | resize({ width: 576, height: 492 }) | webp %}" type="image/webp">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/c12.jpg" | resize({ width: 576, height: 492 }) | jpeg %}" type="image/jpeg">
                     <!--Tablet Image-->
-                    <source media="(max-width: 601px) and (max-width: 1024px)" srcset="{% getUrl "/assets/images/c6.jpeg" | resize({ width: 962, height: 698 }) | avif %}" type="image/avif">
+                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/c12.jpg" | resize({ width: 962, height: 546 }) | avif %}" type="image/avif">
+                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/c12.jpg" | resize({ width: 962, height: 546 }) | webp %}" type="image/webp">
+                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/c12.jpg" | resize({ width: 962, height: 546 }) | jpeg %}" type="image/jpeg">
                     <!--Desktop Image-->
-                    <source media="(max-width: 1025px)" srcset="{% getUrl "/assets/images/c6.jpeg" | resize({ width: 1250, height: 650 }) | avif %}" type="image/avif">
-                    <img src="{% getUrl "/assets/images/c6.jpeg" | resize({ width: 1250, height: 650 }) | jpeg %}" alt="Closeup of finished asphalt shingle roofing" width="625" height="325" loading="lazy" decoding="async">
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/c12.jpg" | resize({ width: 1250, height: 554 }) | avif %}" type="image/avif">
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/c12.jpg" | resize({ width: 1250, height: 554 }) | webp %}" type="image/webp">
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/c12.jpg" | resize({ width: 1250, height: 554 }) | jpeg %}" type="image/jpeg">
+                    <img src="{% getUrl "/assets/images/c12.jpg" | resize({ width: 1250, height: 554 }) | jpeg %}" alt="A modern house with a professionally installed, dark metal tile roof." width="625" height="277" loading="lazy" decoding="async">
                 </picture>
             </li>
         </ul>
@@ -370,10 +429,34 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
             </ul>
             <div class="cs-image-group">
                 <picture class="cs-picture">
-                    <img src="/assets/images/c6.jpg"/>
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/c6.jpg" | resize({ width: 576, height: 640 }) | avif %}" type="image/avif">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/c6.jpg" | resize({ width: 576, height: 640 }) | webp %}" type="image/webp">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/c6.jpg" | resize({ width: 576, height: 640 }) | jpeg %}" type="image/jpeg">
+                    <!--Tablet Image-->
+                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/c6.jpg" | resize({ width: 616, height: 800 }) | avif %}" type="image/avif">
+                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/c6.jpg" | resize({ width: 616, height: 800 }) | webp %}" type="image/webp">
+                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/c6.jpg" | resize({ width: 616, height: 800 }) | jpeg %}" type="image/jpeg">
+                    <!--Desktop Image-->
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/c6.jpg" | resize({ width: 826, height: 800 }) | avif %}" type="image/avif">
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/c6.jpg" | resize({ width: 826, height: 800 }) | webp %}" type="image/webp">
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/c6.jpg" | resize({ width: 826, height: 800 }) | jpeg %}" type="image/jpeg">
+                    <img src="{% getUrl "/assets/images/c6.jpg" | resize({ width: 826, height: 800 }) | jpeg %}" alt="A commercial building with a large, flat, white roof, complete with various HVAC units." width="413" height="400" loading="lazy" decoding="async">
                 </picture>
                 <picture class="cs-picture">
-                    <img src="/assets/images/c12.jpg"/>
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/c12.jpg" | resize({ width: 576, height: 640 }) | avif %}" type="image/avif">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/c12.jpg" | resize({ width: 576, height: 640 }) | webp %}" type="image/webp">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/c12.jpg" | resize({ width: 576, height: 640 }) | jpeg %}" type="image/jpeg">
+                    <!--Tablet Image-->
+                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/c12.jpg" | resize({ width: 616, height: 800 }) | avif %}" type="image/avif">
+                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/c12.jpg" | resize({ width: 616, height: 800 }) | webp %}" type="image/webp">
+                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/c12.jpg" | resize({ width: 616, height: 800 }) | jpeg %}" type="image/jpeg">
+                    <!--Desktop Image-->
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/c12.jpg" | resize({ width: 826, height: 800 }) | avif %}" type="image/avif">
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/c12.jpg" | resize({ width: 826, height: 800 }) | webp %}" type="image/webp">
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/c12.jpg" | resize({ width: 826, height: 800 }) | jpeg %}" type="image/jpeg">
+                    <img src="{% getUrl "/assets/images/c12.jpg" | resize({ width: 826, height: 800 }) | jpeg %}" alt="A modern house with a professionally installed, dark metal tile roof." width="413" height="400" loading="lazy" decoding="async">
                 </picture>
             </div>
         </div>
@@ -422,7 +505,19 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
                     <a href="/contact/" class="cs-button-solid">Request Roof Inspection</a>
                 </div>
                 <picture class="cs-picture">
-                    <img src="/assets/images/sbs1.jpg" loading="lazy" decoding="async">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/sbs1.jpg" | resize({ width: 512, height: 480 }) | avif %}" type="image/avif">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/sbs1.jpg" | resize({ width: 512, height: 480 }) | webp %}" type="image/webp">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/sbs1.jpg" | resize({ width: 512, height: 480 }) | jpeg %}" type="image/jpeg">
+                    <!--Tablet Image-->
+                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/sbs1.jpg" | resize({ width: 850, height: 962 }) | avif %}" type="image/avif">
+                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/sbs1.jpg" | resize({ width: 850, height: 962 }) | webp %}" type="image/webp">
+                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/sbs1.jpg" | resize({ width: 850, height: 962 }) | jpeg %}" type="image/jpeg">
+                    <!--Desktop Image-->
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/sbs1.jpg" | resize({ width: 1136, height: 866 }) | avif %}" type="image/avif">
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/sbs1.jpg" | resize({ width: 1136, height: 866 }) | webp %}" type="image/webp">
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/sbs1.jpg" | resize({ width: 1136, height: 866 }) | jpeg %}" type="image/jpeg">
+                    <img src="{% getUrl "/assets/images/sbs1.jpg" | resize({ width: 1136, height: 866 }) | jpeg %}" alt="A dense cluster of buildings with red, mission-style roofs." width="568" height="433" loading="lazy" decoding="async">
                 </picture>
             </div>
             <!--SBS Reverse-->
@@ -453,7 +548,19 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
                     <a href="/contact/" class="cs-button-solid">Explore Siding Options</a>
                 </div>
                 <picture class="cs-picture">
-                    <img src="/assets/images/sbs2.jpg" loading="lazy" decoding="async"/>
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/sbs2.jpg" | resize({ width: 512, height: 480 }) | avif %}" type="image/avif">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/sbs2.jpg" | resize({ width: 512, height: 480 }) | webp %}" type="image/webp">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/sbs2.jpg" | resize({ width: 512, height: 480 }) | jpeg %}" type="image/jpeg">
+                    <!--Tablet Image-->
+                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/sbs2.jpg" | resize({ width: 850, height: 962 }) | avif %}" type="image/avif">
+                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/sbs2.jpg" | resize({ width: 850, height: 962 }) | webp %}" type="image/webp">
+                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/sbs2.jpg" | resize({ width: 850, height: 962 }) | jpeg %}" type="image/jpeg">
+                    <!--Desktop Image-->
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/sbs2.jpg" | resize({ width: 1136, height: 770 }) | avif %}" type="image/avif">
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/sbs2.jpg" | resize({ width: 1136, height: 770 }) | webp %}" type="image/webp">
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/sbs2.jpg" | resize({ width: 1136, height: 770 }) | jpeg %}" type="image/jpeg">
+                    <img src="{% getUrl "/assets/images/sbs2.jpg" | resize({ width: 1136, height: 770 }) | jpeg %}" alt="A multi-story building with blue siding and a visible chimney." width="568" height="385" loading="lazy" decoding="async">
                 </picture>
             </div>
         </div>
@@ -477,7 +584,19 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
     </div>
     <!--Background Image-->
     <picture class="cs-background">
-        <img src="/assets/images/subscribe.jpg" loading="lazy" decoding="async">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/subscribe.jpg" | resize({ width: 640, height: 640 }) | avif %}" type="image/avif">
+        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/subscribe.jpg" | resize({ width: 640, height: 640 }) | webp %}" type="image/webp">
+        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/subscribe.jpg" | resize({ width: 640, height: 640 }) | jpeg %}" type="image/jpeg">
+        <!--Tablet Image-->
+        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/subscribe.jpg" | resize({ width: 898, height: 894 }) | avif %}" type="image/avif">
+        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/subscribe.jpg" | resize({ width: 898, height: 894 }) | webp %}" type="image/webp">
+        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/subscribe.jpg" | resize({ width: 898, height: 894 }) | jpeg %}" type="image/jpeg">
+        <!--Desktop Image-->
+        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/subscribe.jpg" | resize({ width: 1684, height: 868 }) | avif %}" type="image/avif">
+        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/subscribe.jpg" | resize({ width: 1684, height: 868 }) | webp %}" type="image/webp">
+        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/subscribe.jpg" | resize({ width: 1684, height: 868 }) | jpeg %}" type="image/jpeg">
+        <img src="{% getUrl "/assets/images/subscribe.jpg" | resize({ width: 1684, height: 868 }) | jpeg %}" alt="A residential building with a damaged roof covered by a large blue tarp." width="842" height="434" loading="lazy" decoding="async">
     </picture>
     <picture class="cs-floater2">
         <img src="/assets/svgs/roof-floater.svg" alt="roof icon" loading="lazy" decoding="async">
@@ -487,6 +606,7 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
 <!-- ============================================ -->
 <!--                   Gallery                    -->
 <!-- ============================================ -->
+ 
 <!-- 
 <section id="gallery-404">
     <div class="cs-container">
@@ -499,27 +619,27 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
         <div class="cs-gallery-wrapper">
             <div class="cs-gallery">
                 <picture class="cs-image">
-                    <img src="/assets/images/g1.jpg" loading="lazy" decoding="async">
+                    <img src="/assets/images/g1.jpg" alt="Aerial view showcases a house with a complex roof design including various slopes, dormers, and a chimney." loading="lazy" decoding="async">
                 </picture>
 
                 <picture class="cs-image">
-                    <img src="/assets/images/g2.jpg" loading="lazy" decoding="async">
+                    <img src="/assets/images/g2.jpg" alt="A white, two-story house with a bright blue front door and clean trim." loading="lazy" decoding="async">
                 </picture>
 
                 <picture class="cs-image">
-                    <img src="/assets/images/g3.jpg" loading="lazy" decoding="async">
+                    <img src="/assets/images/g3.jpg" alt="A variety of roofing styles and materials on closely packed houses." loading="lazy" decoding="async">
                 </picture>
 
                 <picture class="cs-image">
-                    <img src="/assets/images/g4.jpg" loading="lazy" decoding="async">
+                    <img src="/assets/images/g4.jpg" alt="A house with a distinctive dark-tiled roof and contrasting light-colored trim." loading="lazy" decoding="async">
                 </picture>
 
                 <picture class="cs-image">
-                    <img src="/assets/images/g5.jpg" loading="lazy" decoding="async">
+                    <img src="/assets/images/g5.jpg" alt="A man in work attire is cleaning the windows of a modern house with floor-to-ceiling windows." loading="lazy" decoding="async">
                 </picture>
 
                 <picture class="cs-image">
-                    <img src="/assets/images/g6.jpg" loading="lazy" decoding="async">
+                    <img src="/assets/images/g6.jpg" alt="A modern house with a complex, dark-colored metal tile roof system, including dormers, valleys, and meticulously finished trim details." loading="lazy" decoding="async">
                 </picture>
             </div>
         </div>
@@ -527,6 +647,7 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
     </div>
 </section>
 -->
+
 <!-- ============================================ -->
 <!--                   Reviews                    -->
 <!-- ============================================ -->

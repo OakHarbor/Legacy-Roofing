@@ -6,7 +6,19 @@
     <div class="cs-container">
         <div class="cs-image-group">
             <picture class="cs-picture">
-                <img src="/assets/images/faq.jpg" loading="lazy" decoding="async">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/faq.jpg" | resize({ width: 476, height: 324 }) | avif %}" type="image/avif">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/faq.jpg" | resize({ width: 476, height: 324 }) | webp %}" type="image/webp">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/faq.jpg" | resize({ width: 476, height: 324 }) | jpeg %}" type="image/jpeg">
+                <!--Tablet Image-->
+                <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/faq.jpg" | resize({ width: 962, height: 696 }) | avif %}" type="image/avif">
+                <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/faq.jpg" | resize({ width: 962, height: 696 }) | webp %}" type="image/webp">
+                <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/faq.jpg" | resize({ width: 962, height: 696 }) | jpeg %}" type="image/jpeg">
+                <!--Desktop Image-->
+                <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/faq.jpg" | resize({ width: 1044, height: 716 }) | avif %}" type="image/avif">
+                <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/faq.jpg" | resize({ width: 1044, height: 716 }) | webp %}" type="image/webp">
+                <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/faq.jpg" | resize({ width: 1044, height: 716 }) | jpeg %}" type="image/jpeg">
+                <img src="{% getUrl "/assets/images/faq.jpg" | resize({ width: 1044, height: 716 }) | jpeg %}" alt="A new house under construction with a modern, dark-colored tile roof." width="522" height="358" loading="lazy" decoding="async">
             </picture>
         </div>
         <div class="cs-content">
@@ -33,7 +45,7 @@
                             A typical roof replacement can take anywhere from a few days to a week, depending on the size of the roof, weather conditions, and any unforeseen issues that may arise during the process. We strive to complete each project efficiently while maintaining high-quality workmanship.
                         </p>
                     </li>
-                    <li class="cs-faq-item active">
+                    <li class="cs-faq-item">
                         <button class="cs-button">
                             <span class="cs-button-text">
                                 Do you offer financing options?

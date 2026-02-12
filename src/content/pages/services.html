@@ -7,6 +7,8 @@ permalink: "/services/"
 {% extends "layouts/base.html" %}
 
 {% block head %}
+    <link rel="preload" as="image" href="{% getUrl "/assets/images/g3.jpg" | resize({ width: 640, height: 566 }) | avif %}" />
+    <link rel="stylesheet" href="/assets/css/root.css">
     <link rel="stylesheet" href="/assets/css/interior.css">
     <link rel="stylesheet" href="/assets/css/services.css">
 {% endblock %}
@@ -14,7 +16,7 @@ permalink: "/services/"
 {% block body %}
 {% from "sections/banner.html" import banner %}
 {{ banner( title="Services" )}}
-                  
+
 <!-- ============================================ -->
 <!--                    Services                  -->
 <!-- ============================================ -->
@@ -23,7 +25,7 @@ permalink: "/services/"
     <div class="cs-container">
         <ul class="cs-card-group">
             <li class="cs-item">
-                <a href="/roof-replacements/" class="cs-item-link">
+                <a href="/contact/" class="cs-item-link">
                     <h2 class="cs-h3">
                         <img class="cs-icon" src="/assets/svgs/s1.svg" loading="lazy" decoding="async" alt="icon" width="32" height="32" aria-hidden="true">
                         Shingle Roofing
@@ -34,7 +36,7 @@ permalink: "/services/"
                 </a>
             </li>
             <li class="cs-item">
-                <a href="/roof-repair/" class="cs-item-link">
+                <a href="/contact/" class="cs-item-link">
                     <h2 class="cs-h3">
                         <img class="cs-icon" src="/assets/svgs/s2.svg" loading="lazy" decoding="async" alt="icon" width="32" height="32" aria-hidden="true">
                         Metal Roofing
@@ -45,7 +47,7 @@ permalink: "/services/"
                 </a>
             </li>
             <li class="cs-item">
-                <a href="/metal-roof-installation/" class="cs-item-link">
+                <a href="/contact/" class="cs-item-link">
                     <h2 class="cs-h3">
                         <img class="cs-icon" src="/assets/svgs/s3.svg" loading="lazy" decoding="async" alt="icon" width="32" height="32" aria-hidden="true">
                         Commercial Roofing
@@ -56,7 +58,7 @@ permalink: "/services/"
                 </a>
             </li>
             <li class="cs-item">
-                <a href="/new-roof-installation/" class="cs-item-link">
+                <a href="/contact/" class="cs-item-link">
                     <h2 class="cs-h3">
                         <img class="cs-icon" src="/assets/svgs/s4.svg" loading="lazy" decoding="async" alt="icon" width="32" height="32" aria-hidden="true">
                         Gutters
@@ -67,7 +69,7 @@ permalink: "/services/"
                 </a>
             </li>
             <li class="cs-item">
-                <a href="/storm-damage-repair/" class="cs-item-link">
+                <a href="/contact/" class="cs-item-link">
                     <h2 class="cs-h3">
                         <img class="cs-icon" src="/assets/svgs/s5.svg" loading="lazy" decoding="async" alt="icon" width="32" height="32" aria-hidden="true">
                         Siding
@@ -220,12 +222,18 @@ permalink: "/services/"
         <div class="cs-image-group">
             <picture class="cs-picture">
                 <!--Mobile Image-->
-                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/banner.jpeg" | resize({ width: 1, height: 1 }) | avif %}" type="image/avif">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/c1.jpg" | resize({ width: 1, height: 1 }) | avif %}" type="image/avif">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/c1.jpg" | resize({ width: 1, height: 1 }) | webp %}" type="image/webp">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/c1.jpg" | resize({ width: 1, height: 1 }) | jpeg %}" type="image/jpeg">
                 <!--Tablet Image-->
-                <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/banner.jpeg" | resize({ width: 666, height: 800 }) | avif %}" type="image/avif">
+                <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/c1.jpg" | resize({ width: 666, height: 800 }) | avif %}" type="image/avif">
+                <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/c1.jpg" | resize({ width: 666, height: 800 }) | webp %}" type="image/webp">
+                <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/c1.jpg" | resize({ width: 666, height: 800 }) | jpeg %}" type="image/jpeg">
                 <!--Desktop Image-->
-                <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/banner.jpeg" | resize({ width: 1036, height: 1246 }) | avif %}" type="image/avif"> 
-                <img src="{% getUrl "/assets/images/banner.jpeg" | resize({ width: 1036, height: 1246 }) | jpeg %}" alt="metal roof installation services" width="518" height="623" loading="lazy" decoding="async" >
+                <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/c1.jpg" | resize({ width: 1036, height: 1246 }) | avif %}" type="image/avif">
+                <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/c1.jpg" | resize({ width: 1036, height: 1246 }) | webp %}" type="image/webp">
+                <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/c1.jpg" | resize({ width: 1036, height: 1246 }) | jpeg %}" type="image/jpeg">
+                <img src="{% getUrl "/assets/images/c1.jpg" | resize({ width: 1036, height: 1246 }) | jpeg %}" alt="A modern home with a well-maintained asphalt shingle roof, featuring clean lines, proper gutter systems, and contrasting trim." width="518" height="623" loading="lazy" decoding="async">
             </picture>
         </div>
     </div>

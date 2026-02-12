@@ -68,9 +68,7 @@
                 content: '';
                 width: 100%;
                 height: 100%;
-                background-color: var(--primary);
-                opacity: 0.1;
-                border-radius: (16/16rem);
+                background-color: #FBF7F4;
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -86,15 +84,13 @@
         .cs-rating {
             display: flex;
             flex-direction: column;
-            gap: (4/16rem);
+            gap: (8/16rem);
         }
 
         .cs-h3 {
-            font-size: (20/16rem);
-            font-weight: 400;
+            font-size: (28/16rem);
             line-height: 1.2em;
             margin: 0;
-            font-family: var(--bodyFont);
             color: var(--headerColor);
             display: flex;
             justify-content: flex-start;
@@ -109,6 +105,15 @@
             width: 100%;
             margin: 0;
             color: var(--bodyTextColor);
+            max-width: 40ch;
+        }
+
+        .cs-floater {
+            height: (60/16rem);
+            width: auto;
+            position: absolute;
+            bottom: 0;
+            right: 0;
         }
 
         .cs-icon {
@@ -159,9 +164,9 @@
             align-items: flex-start;
             position: absolute;
             /* 12px - 24px */
-            right: clamp(0.75rem, 2.5vw, 1.5rem);
+            right: clamp(0.75rem, 2.5vw, (40/16rem));
             /* 12px - 24px */
-            bottom: clamp(0.75rem, 2.5vw, 1.5rem);
+            bottom: clamp(0.75rem, 2.5vw, (40/16rem));
         }
 
         .cs-box-icon {
@@ -234,10 +239,14 @@
             .cs-box-text {
                 opacity: 0.8;
             }
+
+            .cs-ratings::before {
+                opacity: 0.2;
+            }
         }
     }
 }
-                                
+
 /*-- -------------------------- -->
 <---       Why Choose Us        -->
 <--- -------------------------- -*/
@@ -246,6 +255,7 @@
 @media only screen and (min-width: 0rem) {
     #why-choose-1630 {
         padding: var(--sectionPadding);
+        background-color: var(--background-alt);
 
         .cs-container {
             width: 100%;
@@ -313,6 +323,10 @@
             }
         }
 
+        .cs-title {
+            max-width: 20ch;
+        }
+
         .cs-card-group {
             width: 100%;
             margin: 0;
@@ -345,6 +359,10 @@
             align-items: center;
             gap: (12/16rem);
             transition: color 0.3s;
+        }
+
+        .cs-h3-text {
+            max-width: 16ch;
         }
 
         .cs-wrapper {
@@ -433,6 +451,205 @@
                 &:before {
                     background-color: var(--accent);
                 }
+            }
+        }
+    }
+}
+
+
+/*-- -------------------------- -->
+<---       Why Choose Us        -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #why-choose-1313 {
+        padding: var(--sectionPadding);
+        position: relative;
+        z-index: 10;
+
+        .cs-container {
+            width: 100%;
+            /* changes to 1280px at tablet */
+            max-width: (550/16rem);
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
+        }
+
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: left;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: flex-start;
+        }
+
+        .cs-title {
+            max-width: 24ch;
+        }
+
+        .cs-text {
+            max-width: (522/16rem);
+        }
+
+        .cs-ul {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            /* 20px - 40px */
+            gap: clamp(1.25rem, 3vw, 2.5rem);
+        }
+
+        .cs-li {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: (16/16rem);
+        }
+
+        .cs-h3 {
+            /* 20px - 25px */
+            font-size: clamp(1.25rem, 2vw, 1.5625rem);
+            line-height: 1.2em;
+            margin: 0;
+            color: var(--headerColor);
+            display: block;
+        }
+
+        .cs-li-text {
+            /* 14px 16px */
+            font-size: clamp(0.875rem, 1.5vw, 1rem);
+            line-height: 1.5em;
+            margin: 0;
+            color: var(--bodyTextColor);
+        }
+
+        .cs-flex {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            /* changes to 20px at desktop */
+            gap: (32/16rem);
+        }
+
+        .cs-image-group {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            /* 16px - 20px */
+            gap: clamp(1rem, 2.3vw, 1.25rem);
+        }
+
+        .cs-picture {
+            width: 100%;
+            height: 100vw;
+            max-height: (400/16rem);
+            display: block;
+            position: relative;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #why-choose-1313 {
+        .cs-container {
+            max-width: (1280/16rem);
+        }
+
+        .cs-content {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: (20/16rem);
+        }
+
+        .cs-title {
+            margin: 0;
+        }
+
+        .cs-flex-group {
+            width: 50%;
+            /* prevents flexbox from squishing it */
+            flex: none;
+        }
+
+        .cs-ul {
+            flex-direction: row;
+        }
+
+        .cs-image-group {
+            flex-wrap: nowrap;
+        }
+    }
+}
+
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    #why-choose-1313 {
+        .cs-flex {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: stretch;
+        }
+
+        .cs-ul {
+            max-width: (325/16rem);
+            flex-direction: column;
+            align-self: flex-end;
+        }
+
+        .cs-image-group {
+            max-width: (846/16rem);
+            align-items: stretch;
+        }
+
+        .cs-picture {
+            min-height: (400/16rem);
+            height: 100%;
+            max-height: 100%;
+        }
+    }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #why-choose-1313 {
+            background-color: rgba(0, 0, 0, .2);
+
+            .cs-title,
+            .cs-text, .cs-li-text {
+                color: var(--bodyTextColorWhite);
+            }
+
+            .cs-h3 {
+                color: var(--secondary);
+            }
+
+            .cs-text, .cs-li-text {
+                opacity: 0.8;
             }
         }
     }

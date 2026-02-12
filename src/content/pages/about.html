@@ -1,14 +1,15 @@
 ---
-title: "About | Sunny's Roofing"
-description: "Trusted roofing in Edmonds and Seattle. Sunny’s Roofing provides reliable repairs, replacements, and inspections to keep your home protected all year."
+title: "About | Legacy Roofing"
+description: "Learn about Legacy Roofing's commitment to quality, integrity, and customer satisfaction. Discover our family-owned values and decades of roofing expertise."
 permalink: "/about/"
 ---
 
 {% extends "layouts/base.html" %}
 
 {% block head %}
-    <link rel="preload" as="image" href="{% getUrl "/assets/images/banner.jpeg" | resize({ width: 640, height: 566 }) | avif %}" />
-    <link rel="preload" as="image" href="{% getUrl "/assets/images/about-1.jpg" | resize({ width: 482, height: 536 }) | avif %}" />
+    <link rel="preload" as="image" href="{% getUrl "/assets/images/g3.jpg" | resize({ width: 640, height: 566 }) | avif %}" />
+    <link rel="preload" as="image" href="{% getUrl "/assets/images/c1.jpg" | resize({ width: 576, height: 960 }) | avif %}" />
+    <link rel="stylesheet" href="/assets/css/root.css">
     <link rel="stylesheet" href="/assets/css/about.css">
 {% endblock %}
 
@@ -23,44 +24,51 @@ permalink: "/about/"
 <section id="sbs-1982">
     <div class="cs-container">
         <div class="cs-content">
-            <span class="cs-topper">TRUSTED ROOFING PROFESSIONALS</span>
-            <h2 class="cs-title">Honest Work, Fair Prices, Lasting Protection</h2>
+            <span class="cs-topper">Who We Are</span>
+            <h2 class="cs-title">Building Trust Through Quality Workmanship</h2>
             <p class="cs-text-large">
-                With hands-on experience, clear communication, and genuine craftsmanship, Sunny's Roofing approaches each roofing project with dedication and care.
+                Legacy Roofing was founded on principles of honesty, quality, and exceptional service that homeowners and businesses deserve.
             </p>
             <p class="cs-text">
-                Sunny's Roofing LLC is a local, family-owned company that merges decades of Pacific Northwest roofing knowledge with cutting-edge methods to achieve exceptional outcomes. Every detail matters to us—we guarantee clear communication, competitive pricing, and outstanding workmanship throughout your project. Our dedication to safeguarding your property and building lasting relationships drives everything we do.
+                We believe in doing roofing the right way—no shortcuts, no surprises. Our family's generations of expertise ensure every project receives the attention and craftsmanship it deserves.
             </p>
-            <a href="/about/" class="cs-button-solid">Learn More About Us</a>
+            <a href="/contact/" class="cs-button-solid">Contact Us Today</a>
             <div class="cs-ratings">
                 <div class="cs-stars">
-                    <img class="cs-star" loading="lazy" decoding="async" src="/assets/svgs/stars.svg" alt="stars" width="120" height="20" aria-hidden="true">
+                    <img class="cs-star" loading="lazy" decoding="async" src="/assets/svgs/stars.svg" alt="stars" aria-hidden="true">
                 </div>
                 <div class="cs-rating">
-                    <h3 class="cs-h3">100% Client Satisfaction</h3>
+                    <h3 class="cs-h3">Customer-First Approach</h3>
                     <p class="cs-rating-text">
-                        Homeowners rely on us for fair pricing, timely project delivery, and durable roofs engineered for Washington's climate.
+                        Your satisfaction truly drives everything we do, guaranteed every single time.
                     </p>
                 </div>
+                <img class="cs-floater" src="/assets/svgs/roof-floater.svg"/>
             </div>
         </div>
         <div class="cs-image-group">
             <picture class="cs-background">
                 <!--Mobile Image-->
-                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/c1.jpeg" | resize({ width: 576, height: 960 }) | avif %}" type="image/avif">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/c1.jpg" | resize({ width: 576, height: 960 }) | avif %}" type="image/avif">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/c1.jpg" | resize({ width: 576, height: 960 }) | webp %}" type="image/webp">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/c1.jpg" | resize({ width: 576, height: 960 }) | jpeg %}" type="image/jpeg">
                 <!--Tablet Image-->
-                <source media="(max-width: 601px) and (max-width: 1024px)" srcset="{% getUrl "/assets/images/c1.jpeg" | resize({ width: 930, height: 1530 }) | avif %}" type="image/avif">
+                <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/c1.jpg" | resize({ width: 930, height: 1360 }) | avif %}" type="image/avif">
+                <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/c1.jpg" | resize({ width: 930, height: 1360 }) | webp %}" type="image/webp">
+                <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/c1.jpg" | resize({ width: 930, height: 1360 }) | jpeg %}" type="image/jpeg">
                 <!--Desktop Image-->
-                <source media="(max-width: 1025px)" srcset="{% getUrl "/assets/images/c1.jpeg" | resize({ width: 1260, height: 1680 }) | avif %}" type="image/avif">
-                <img src="{% getUrl "/assets/images/c1.jpeg" | resize({ width: 1260, height: 1680 }) | jpeg %}" alt="custom house build" width="630" height="840" loading="lazy" decoding="async">
+                <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/c1.jpg" | resize({ width: 1260, height: 1378 }) | avif %}" type="image/avif">
+                <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/c1.jpg" | resize({ width: 1260, height: 1378 }) | webp %}" type="image/webp">
+                <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/c1.jpg" | resize({ width: 1260, height: 1378 }) | jpeg %}" type="image/jpeg">
+                <img src="{% getUrl "/assets/images/c1.jpg" | resize({ width: 1260, height: 1378 }) | jpeg %}" alt="A modern home with a well-maintained asphalt shingle roof, featuring clean lines, proper gutter systems, and contrasting trim." width="630" height="689" decoding="async">
             </picture>
             <div class="cs-box">
-                <img class="cs-box-icon" loading="lazy" decoding="async" src="/assets/svgs/concrete-truck.svg" alt="concrete truck" width="60" height="60">
+                <img class="cs-box-icon" loading="lazy" decoding="async" src="/assets/svgs/owner.svg" width="60" height="60">
                 <span class="cs-desc">
-                    Owner operated
+                    Family-Owned Excellence
                 </span>
                 <p class="cs-box-text">
-                    Direct oversight of quality standards, project schedules, and exceptional client care.
+                    Decades of roofing expertise blend traditional methods with modern standards.
                 </p>
             </div>
         </div>
@@ -76,19 +84,25 @@ permalink: "/about/"
         <div class="cs-flex">
             <picture class="cs-picture">
                 <!--Mobile Image-->
-                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/c2.jpeg" | resize({ width: 576, height: 320 }) | avif %}" type="image/avif">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/c2.jpg" | resize({ width: 576, height: 320 }) | avif %}" type="image/avif">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/c2.jpg" | resize({ width: 576, height: 320 }) | webp %}" type="image/webp">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/c2.jpg" | resize({ width: 576, height: 320 }) | jpeg %}" type="image/jpeg">
                 <!--Tablet Image-->
-                <source media="(max-width: 601px) and (max-width: 1024px)" srcset="{% getUrl "/assets/images/c2.jpeg" | resize({ width: 864, height: 802 }) | avif %}" type="image/avif">
+                <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/c2.jpg" | resize({ width: 864, height: 800 }) | avif %}" type="image/avif">
+                <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/c2.jpg" | resize({ width: 864, height: 800 }) | webp %}" type="image/webp">
+                <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/c2.jpg" | resize({ width: 864, height: 800 }) | jpeg %}" type="image/jpeg">
                 <!--Desktop Image-->
-                <source media="(max-width: 1025px)" srcset="{% getUrl "/assets/images/c2.jpeg" | resize({ width: 1216, height: 858 }) | avif %}" type="image/avif">
-                <img src="{% getUrl "/assets/images/c2.jpeg" | resize({ width: 1216, height: 858 }) | jpeg %}" alt="roofing" width="608" height="429" loading="lazy" decoding="async">
+                <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/c2.jpg" | resize({ width: 1216, height: 858 }) | avif %}" type="image/avif">
+                <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/c2.jpg" | resize({ width: 1216, height: 858 }) | webp %}" type="image/webp">
+                <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/c2.jpg" | resize({ width: 1216, height: 858 }) | jpeg %}" type="image/jpeg">
+                <img src="{% getUrl "/assets/images/c2.jpg" | resize({ width: 1216, height: 858 }) | jpeg %}" alt="A complex roof design with multiple gables, valleys, and dormers, all covered in high-quality asphalt shingles" width="608" height="429" loading="lazy" decoding="async">
             </picture>
 
             <div class="cs-content">
                 <span class="cs-topper">Why Choose Us</span>
-                <h2 class="cs-title">Experience, Quality, and Commitment You Can Trust</h2>
+                <h2 class="cs-title">Excellence in Every Shingle We Install</h2>
                 <p class="cs-text">
-                   More than just roofers, we're committed craftspeople passionate about delivering excellence. Throughout every phase of your project, our skilled team works with meticulous attention, streamlined processes, and lasting dedication.
+                   We combine decades of roofing expertise with transparent communication and competitive pricing. Our family's reputation depends on your satisfaction, making quality our only option.
                 </p>
                 <a href="/contact/" class="cs-button-solid">Get Your Free Quote</a> 
             </div>
@@ -97,50 +111,118 @@ permalink: "/about/"
             <li class="cs-item">
                 <h3 class="cs-h3">
                     <picture class="cs-wrapper">
-                        <img class="cs-h3-icon" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/clock.svg" alt="icon" width="24" height="24">
+                        <img class="cs-h3-icon" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/why1.svg" alt="icon" width="24" height="24">
                     </picture> 
-                    24/7 Storm Response
+                    <span class="cs-h3-text">Proven<br/>Experience</span>
                 </h3>
                 <p class="cs-item-text">
-                    Rapid response for critical situations, offering immediate assistance for emergency leaks and weather-related damage across the Edmonds area.
+                    For over 20 years, we’ve proudly provided expert roofing solutions to homeowners and businesses.
                 </p>
             </li>
             <li class="cs-item">
                 <h3 class="cs-h3">
                     <picture class="cs-wrapper">
-                        <img class="cs-h3-icon" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/group.svg" alt="icon" width="24" height="24">
+                        <img class="cs-h3-icon" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/why2.svg" alt="icon" width="24" height="24">
                     </picture>
-                    Washington Experts
+                    <span class="cs-h3-text">Transparent Communication</span>
                 </h3>
                 <p class="cs-item-text">
-                    Fully licensed, bonded, and insured team members with deep knowledge of Pacific Northwest roofing issues and proven remedies.
+                    We keep you updated with clear timelines and honest assessments throughout the process.
                 </p>
             </li>
             <li class="cs-item">
                 <h3 class="cs-h3">
                     <picture class="cs-wrapper">
-                        <img class="cs-h3-icon" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/truck.svg" alt="icon" width="24" height="24">
+                        <img class="cs-h3-icon" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/why3.svg" alt="icon" width="24" height="24">
                     </picture>
-                    Premium Materials 
+                    <span class="cs-h3-text">Quality Without Overpricing</span>
                 </h3>
                 <p class="cs-item-text">
-                    Certified GAF and CertainTeed installations featuring premium materials specifically selected for Washington's distinctive climate conditions.
+                    We offer exceptional workmanship at fair prices, proving quality and value can go hand in hand.
                 </p>
             </li>
              <li class="cs-item">
                 <h3 class="cs-h3">
                     <picture class="cs-wrapper">
-                        <img class="cs-h3-icon" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/thumbs-up.svg" alt="icon" width="24" height="24">
+                        <img class="cs-h3-icon" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/why4.svg" alt="icon" width="24" height="24">
                     </picture>
-                    Transparent Pricing
+                    <span class="cs-h3-text">No-Shortcut Guarantee</span>
                 </h3>
                 <p class="cs-item-text">
-                   Comprehensive quotes with transparent pricing, along with adaptable payment plans to ensure your new roof fits your budget.
+                   We take great pride in our work, ensuring your roof is treated with the utmost care and respect.
                 </p>
             </li>
         </ul>
     </div>
 </section>
+
+
+<!-- ============================================ -->
+<!--                Why Choose Us                 -->
+<!-- ============================================ -->
+
+<section id="why-choose-1313">
+    <div class="cs-container">
+        <div class="cs-content">
+            <div class="cs-flex-group">
+                <span class="cs-topper">Our Commitment</span>
+                <h2 class="cs-title">Dedicated to Protecting Your Investment</h2>
+            </div>
+            <p class="cs-text">
+                Every project reflects our family's values: integrity, craftsmanship, and service. We're not just building roofs—we're building lasting relationships with homeowners who value quality.
+            </p>
+        </div>
+        <div class="cs-flex">
+            <ul class="cs-ul">
+                <li class="cs-li">
+                    <h3 class="cs-h3">Our Mission</h3>
+                    <p class="cs-li-text">
+                        Provide dependable, high-quality roofing solutions while maintaining honest communication and exceptional service always.
+                    </p>
+                </li>
+                <li class="cs-li">
+                    <h3 class="cs-h3">Our Expertise</h3>
+                    <p class="cs-li-text">
+                        Decades of commercial and residential roofing expertise applied to every project, big or small, with precision.
+                    </p>
+                </li>
+            </ul>
+            <div class="cs-image-group">
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/c6.jpg" | resize({ width: 576, height: 640 }) | avif %}" type="image/avif">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/c6.jpg" | resize({ width: 576, height: 640 }) | webp %}" type="image/webp">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/c6.jpg" | resize({ width: 576, height: 640 }) | jpeg %}" type="image/jpeg">
+                    <!--Tablet Image-->
+                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/c6.jpg" | resize({ width: 616, height: 800 }) | avif %}" type="image/avif">
+                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/c6.jpg" | resize({ width: 616, height: 800 }) | webp %}" type="image/webp">
+                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/c6.jpg" | resize({ width: 616, height: 800 }) | jpeg %}" type="image/jpeg">
+                    <!--Desktop Image-->
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/c6.jpg" | resize({ width: 826, height: 800 }) | avif %}" type="image/avif">
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/c6.jpg" | resize({ width: 826, height: 800 }) | webp %}" type="image/webp">
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/c6.jpg" | resize({ width: 826, height: 800 }) | jpeg %}" type="image/jpeg">
+                    <img src="{% getUrl "/assets/images/c6.jpg" | resize({ width: 826, height: 800 }) | jpeg %}" alt="A commercial building with a large, flat, white roof, complete with various HVAC units." width="413" height="400" loading="lazy" decoding="async">
+                </picture>
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/c12.jpg" | resize({ width: 576, height: 640 }) | avif %}" type="image/avif">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/c12.jpg" | resize({ width: 576, height: 640 }) | webp %}" type="image/webp">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/c12.jpg" | resize({ width: 576, height: 640 }) | jpeg %}" type="image/jpeg">
+                    <!--Tablet Image-->
+                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/c12.jpg" | resize({ width: 616, height: 800 }) | avif %}" type="image/avif">
+                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/c12.jpg" | resize({ width: 616, height: 800 }) | webp %}" type="image/webp">
+                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/c12.jpg" | resize({ width: 616, height: 800 }) | jpeg %}" type="image/jpeg">
+                    <!--Desktop Image-->
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/c12.jpg" | resize({ width: 826, height: 800 }) | avif %}" type="image/avif">
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/c12.jpg" | resize({ width: 826, height: 800 }) | webp %}" type="image/webp">
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/c12.jpg" | resize({ width: 826, height: 800 }) | jpeg %}" type="image/jpeg">
+                    <img src="{% getUrl "/assets/images/c12.jpg" | resize({ width: 826, height: 800 }) | jpeg %}" alt="A modern house with a professionally installed, dark metal tile roof." width="413" height="400" loading="lazy" decoding="async">
+                </picture>
+            </div>
+        </div>
+    </div>
+</section>
+
 
 {% include "sections/cta.html" %}
 

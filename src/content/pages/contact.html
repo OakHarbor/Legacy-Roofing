@@ -1,13 +1,14 @@
 ---
-title: "Contact | Sunny's Roofing"
-description: "Contact our Edmonds, WA roofing experts for fast inspections, quality repairs, and reliable replacements. Get a free estimate today!"
+title: "Contact | Legacy Roofing"
+description: "Get in touch with Legacy Roofing for expert roofing services in Nashville. Contact us today for a free consultation and let our family-owned business take care of your roofing needs."
 permalink: "/contact/"
 ---
 
 {% extends "layouts/base.html" %}
 
 {% block head %}
-    <link rel="preload" as="image" href="{% getUrl "/assets/images/banner.jpeg" | resize({ width: 640, height: 566 }) | avif %}" />
+    <link rel="preload" as="image" href="{% getUrl "/assets/images/g3.jpg" | resize({ width: 640, height: 566 }) | avif %}" />
+    <link rel="stylesheet" href="/assets/css/root.css">
     <link rel="stylesheet" href="/assets/css/contact.css">
 {% endblock %}
 
@@ -23,10 +24,10 @@ permalink: "/contact/"
 <section id="contact-1388">
     <div class="cs-container">
         <div class="cs-content">
-            <span class="cs-topper">Contact Us</span>
-            <h1 class="cs-title">Need A New Roof</h1>
+            <span class="cs-topper">Get in Touch</span>
+            <h1 class="cs-title">Contact Us Today</h1>
             <p class="cs-text">
-                Have roofing concerns? Get in touch and our team will assess your home.
+                Ready to discuss your roofing project? Our team is here to answer questions, provide expert guidance, and schedule your free consultation. Let's get started.
             </p>
             <ul class="cs-ul">
                 <li class="cs-li">
@@ -55,28 +56,24 @@ permalink: "/contact/"
                     </picture>
                     <div class="cs-flex-group">
                         <span class="cs-header">Service Area</span>
-                        <a href="{{ client.mapLink }}" target="_blank" class="cs-link">Serving Edmonds & Greater Seattle Area</a>
+                        <a href="{{ client.mapLink }}" target="_blank" class="cs-link">Serving Nashville and surrounding areas</a>
                     </div>
                 </li>
             </ul>
         </div>
         <!--Form-->
         <form class="cs-form" id="cs-form-1388" name="Contact Form" method="post" data-netlify="true">
-            <h3 class="cs-h3">Make Appointment</h3>
+            <h3 class="cs-h3">Request Your Free Consultation</h3>
             <label class="cs-label">
-                Name
                 <input class="cs-input" required type="text" id="name-1388" name="name" placeholder="Name">
             </label>
             <label class="cs-label cs-email">
-                Email
                 <input class="cs-input" required type="email" id="email-1388" name="email" placeholder="Email">
             </label>
             <label class="cs-label cs-phone">
-                Phone
                 <input class="cs-input" required type="number" id="phone-1388" name="phone" placeholder="Phone">
             </label>
              <label class="cs-label" for="service-1388">
-                Service
                 <div class="cs-dropdown">
                     <select class="cs-select" id="service-1388" name="service" placeholder="Select A Service" required>
                         <option value="" disabled selected>Select a Service</option>
@@ -92,14 +89,13 @@ permalink: "/contact/"
             </label>
             <div class="cs-span-12" data-netlify-recaptcha="true"></div>
             <label class="cs-label">
-                Message
                 <textarea class="cs-input cs-textarea" required name="Message" id="message-1388" placeholder="Write message..."></textarea>
             </label>
-            <button class="cs-button-solid cs-submit" type="submit">Send Message</button>
+            <button class="cs-button-solid cs-submit" type="submit">Submit Inquiry</button>
         </form>
     </div>
 </section>
-          
+
 <!-- ============================================ -->
 <!--                   Reviews                    -->
 <!-- ============================================ -->
@@ -107,33 +103,33 @@ permalink: "/contact/"
 <section id="reviews-727">
     <div class="cs-container">
         <div class="cs-content">
-            <span class="cs-topper">Client Stories</span>
-            <h2 class="cs-title">What Our Customers Are Saying</h2>
+            <span class="cs-topper">Client Testamonials</span>
+            <h2 class="cs-title">What Customers Say</h2>
         </div>
         <ul class="cs-card-group">
             <li class="cs-item">
                 <img class="cs-icon" src="/assets/svgs/quote-2.svg" alt="quote icon" aria-hidden="true" width="40" height="38" loading="lazy" decoding="async">
-                <h3 class="cs-h3">Gutter Cleaning &  Installation, Roof inspection, Roof Installation</h3>
+                <h3 class="cs-h3">Outstanding Service from Start to Finish</h3>
                 <p class="cs-item-text">
-                    Very good quality and price I really liked the work they do I recommend it.
+                    The team was professional, communicated clearly, and completed our roof replacement on time. The quality exceeded our expectations completely.
                 </p>
-                <span class="cs-name">Google Review</span>
+                <span class="cs-name">Sarah M. Google Review</span>
             </li>
             <li class="cs-item">
                 <img class="cs-icon" src="/assets/svgs/quote-2.svg" alt="quote icon" aria-hidden="true" width="40" height="38" loading="lazy" decoding="async">
-                <h3 class="cs-h3">Roof Inspection, Repair, And Installation</h3>
+                <h3 class="cs-h3">Honest Contractors Who Deliver on Promises</h3>
                 <p class="cs-item-text">
-                    Good service, reliable, and trustworthy company.
+                    Finally found a roofing company that doesn't cut corners. They were transparent about pricing and the results speak for themselves.
                 </p>
-                <span class="cs-name">Google Review</span>
+                <span class="cs-name">Michael T. Google Review</span>
             </li>
             <li class="cs-item">
                 <img class="cs-icon" src="/assets/svgs/quote-2.svg" alt="quote icon" aria-hidden="true" width="40" height="38" loading="lazy" decoding="async">
-                <h3 class="cs-h3">Roof repair, Skylight repair </h3>
+                <h3 class="cs-h3">Family-Owned Business That Truly Cares</h3>
                 <p class="cs-item-text">
-                   Sunny’s Roofing is fantastic. Had a great experience with them and will be using them again in the future!
+                   Legacy Roofing treated our home like their own. The attention to detail and constant communication made the process stress-free.
                 </p>
-                <span class="cs-name">Elizabeth - Google Review</span>
+                <span class="cs-name">Jennifer A. Google Review</span>
             </li>
         </ul>
     </div>
